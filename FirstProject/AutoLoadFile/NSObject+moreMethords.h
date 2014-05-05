@@ -26,4 +26,5 @@
 -(UIViewContentMode)modeFromJSON:(NSInteger )integer;//返回视图包含子视图的类型
 
 -(UIButtonType )buttonTypeFromMapper:(NSString *)string;//返回按钮的类型样式
+
 @end

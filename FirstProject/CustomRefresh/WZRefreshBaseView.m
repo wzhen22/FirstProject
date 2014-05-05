@@ -38,7 +38,7 @@
     label.textAlignment = NSTextAlignmentCenter;
     return label;
 }
-#pragma mark - 初始化方法
+
 #pragma mark - 初始化方法
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView
 {

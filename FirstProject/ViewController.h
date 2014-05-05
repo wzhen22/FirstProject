@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WCustomTableView;
 @interface ViewController : UIViewController
-
+@property(nonatomic,strong) WCustomTableView *wCtableVC;
 @end

@@ -23,22 +23,9 @@
 -(NSArray *)titleOfArrayOfTitleFormJSON:(NSDictionary *)dictionary;
 -(NSArray *)imageOfArrayOfTitleFormJSON:(NSDictionary *)dictionary andString:(NSString *)string;
 
--(UIColor *)colorFromJSONnum:(NSInteger)num;//转换为基本颜色样式
-
--(NSTextAlignment) acheiveTextAlignmentFromJSONnum:(NSInteger)num;//转换为支持的文字对齐方式
-
--(CGPoint) pointFromJSON:(NSDictionary *)dictionary;//返回点坐标
-
--(CGSize )sizeFromJSON:(NSDictionary *)dictionary;//返回size的宽和高
-
--(CGRect )rectFromJSON:(NSDictionary *)dictionary;//返回一个rect值
-
--(BOOL) boolFromJSON:(NSInteger )integer;
-
--(NSDictionary *)viewTagFromDictionary:(NSDictionary *)dictionary;
-
--(UIImage *)imageFromJSON:(NSString *)string;
-
--(UIViewContentMode)modeFromJSON:(NSInteger )integer;
+//返回自定义按钮的对象数组
+-(NSArray *)instanceCustomButtonFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义表视图的对象数组
+-(NSArray *)instanceCustomTabelViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 
 @end

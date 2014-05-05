@@ -7,12 +7,13 @@
 //
 
 #import "wDynamicLayout.h"
-#import "WCustomTableView.h"
-#import "customButton.h"
+#import "HeaderForCustoms.h"
 
+/* ------------------------ */
+#define typeOfControl @"type"
 
 @interface wDynamicLayout (){
-
+    NSArray *typeOfArray;
 }
 
 @end
@@ -20,11 +21,17 @@
 @implementation wDynamicLayout{
     
 }
+-(id)init{
+    self = [super init];
+    if (self) {
+        typeOfArray = @[@"button",@"label",@"textField",@"customView",@"segment",@"slider",@"pageControl",@"scrollView",@"switch",@"imageView",@"tableView"];//用于判断接受控键的类型
+    }
+    return self;
+}
 
 -(void)loadItemsForGroup:(NSDictionary *)dictionary AndBaseView:(id)baseView{
 //    CountString *lCount = [[CountString alloc]init];
-    
-    NSArray *typeOfArray = @[@"button",@"label",@"textField",@"customView",@"segment",@"slider",@"pageControl",@"scrollView",@"switch",@"imageView",@"tableView"];//用于判断接受控键的类型
+//    NSArray *typeOfArray = @[@"button",@"label",@"textField",@"customView",@"segment",@"slider",@"pageControl",@"scrollView",@"switch",@"imageView",@"tableView"];//用于判断接受控键的类型
     NSDictionary *lDictionary = dictionary;//通过json文件解析出来的字典用于动态布局
     NSInteger numOfitems;               //纪录需要布局的控键的个数
     numOfitems = [lDictionary allKeys].count;
@@ -32,7 +39,7 @@
         NSString *lKeyString = [NSString stringWithFormat:@"item_%d",i];
         NSDictionary *AttributeDic = [lDictionary objectForKey:lKeyString];
         for (int j = 0; j<typeOfArray.count; j++) {
-            if ([[typeOfArray objectAtIndex:j]isEqualToString:[AttributeDic objectForKey:@"type"]]) {
+            if ([[typeOfArray objectAtIndex:j]isEqualToString:[AttributeDic objectForKey:typeOfControl]]) {
                 switch (j) {
                     case 0:{
                         customButton *button = [customButton loadButtonWithModer:AttributeDic];
@@ -40,7 +47,8 @@
                         break;
                     }//加载customButton
                     case 1:{
-                        
+                        CustomLabel *label = [CustomLabel loadCustomLabelFromMode:AttributeDic];
+                        [baseView addSubview:label];
                         break;
                     }//加载UILabel
                     case 2:{
@@ -109,34 +117,34 @@
 }
 //每一块的控键类型在这里添加
 -(NSDictionary *)viewTagFromDictionary:(NSDictionary *)dictionary{
-    NSArray *typeOfArray = @[@"button",@"label",@"textField",@"customView",@"segment",@"slider",@"pageControl",@"scrollView",@"switch",@"tableView"];//用于判断接受控键的类型
+//    NSArray *typeOfArray = @[@"button",@"label",@"textField",@"customView",@"segment",@"slider",@"pageControl",@"scrollView",@"switch",@"tableView"];//用于判断接受控键的类型
     NSMutableDictionary *lMdic = [[NSMutableDictionary alloc]init];
     for (int i=0;  i<[dictionary.allKeys count];i++) {
         NSString *lKeyString = [NSString stringWithFormat:@"item_%d",i];
         NSDictionary *AttributeDic = [dictionary objectForKey:lKeyString];
         for (int j = 0; j<typeOfArray.count; j++) {
-            if ([[typeOfArray objectAtIndex:j]isEqualToString:[AttributeDic objectForKey:@"type"]]) {
+            if ([[typeOfArray objectAtIndex:j]isEqualToString:[AttributeDic objectForKey:typeOfControl]]) {
                 switch (j) {
                     case 0:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"BkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         break;
                     }
                     case 1:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"LkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         break;
                     }
                     case 2:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"TkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         break;
                     }
                     case 3:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"CkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         //把子布局字典里面的tag值存入总的返回字典
@@ -146,25 +154,25 @@
                         break;
                     }
                     case 4:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"SkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         break;
                     }
                     case 5:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"SkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         break;
                     }
                     case 6:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"PkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         break;
                     }
                     case 7:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"SkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         //把子布局字典里面的tag值存入总的返回字典
@@ -174,13 +182,20 @@
                         break;
                     }
                     case 8:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"SkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         break;
                     }
                     case 9:{
-                        NSString *handlesOfType = [AttributeDic objectForKey:@"type"];
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
+                        NSInteger numOfTag = [[AttributeDic objectForKey:@"IkeyOfTag"] intValue];
+                        [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
+                        break;
+                    }
+
+                    case 10:{
+                        NSString *handlesOfType = [AttributeDic objectForKey:typeOfControl];
                         NSInteger numOfTag = [[AttributeDic objectForKey:@"TkeyOfTag"] intValue];
                         [lMdic setObject:handlesOfType forKey:[NSString stringWithFormat:@"%ld",(long)numOfTag]];
                         break;
@@ -215,144 +230,34 @@
     }
     return jArray;
 }
-
-#pragma mark base method
--(UIColor *)colorFromJSONnum:(NSInteger)num{
-    UIColor *Rcolor;
-    switch (num) {
-        case 0:
-            Rcolor  = [UIColor blackColor];
-            break;
-        case 1:
-            Rcolor  = [UIColor darkGrayColor];
-            break;
-        case 2:
-            Rcolor  = [UIColor lightGrayColor];
-            break;
-        case 3:
-            Rcolor  = [UIColor whiteColor];
-            break;
-        case 4:
-            Rcolor  = [UIColor grayColor];
-            break;
-        case 5:
-            Rcolor  = [UIColor redColor];
-            break;
-        case 6:
-            Rcolor  = [UIColor greenColor];
-            break;
-        case 7:
-            Rcolor  = [UIColor blueColor];
-            break;
-        case 8:
-            Rcolor  = [UIColor cyanColor];
-            break;
-        case 9:
-            Rcolor  = [UIColor yellowColor];
-            break;
-        case 10:
-            Rcolor  = [UIColor magentaColor];
-            break;
-        case 11:
-            Rcolor  = [UIColor orangeColor];
-            break;
-        case 12:
-            Rcolor  = [UIColor purpleColor];
-            break;
-        case 13:
-            Rcolor  = [UIColor brownColor];
-            break;
-        case 14:
-            Rcolor  = [UIColor clearColor];
-            break;
-
-        default:
-        Rcolor  = [UIColor clearColor];
-            break;
+#pragma mark 通过tag值返回实例对象
+-(NSArray *)instanceCustomButtonFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:0]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"100%d",a];
+            customButton *cButton = (customButton *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cButton];
+        }
     }
-    return Rcolor;
+    return mArray;
 }
-
--(NSTextAlignment) acheiveTextAlignmentFromJSONnum:(NSInteger)num{
-    NSTextAlignment textAlignment;
-    switch (num) {
-        case 1:
-        textAlignment = NSTextAlignmentCenter;
-        break;
-        case 2:
-        textAlignment = NSTextAlignmentRight;
-        break;
-        case 3:
-        textAlignment = NSTextAlignmentJustified;
-        break;
-        case 4:
-        textAlignment = NSTextAlignmentNatural;
-        break;
-        default:
-        textAlignment = NSTextAlignmentLeft;
-        break;
+-(NSArray *)instanceCustomTabelViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:0]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"1000%d",a];
+            WCustomTableView *cTableView = (WCustomTableView *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cTableView];
+        }
     }
-    return textAlignment;
-}
+    return mArray;
 
--(CGPoint) pointFromJSON:(NSDictionary *)dictionary{
-    CGPoint point;
-    CGFloat x = [[dictionary objectForKey:@"keyPoint_x"] floatValue];
-    CGFloat y = [[dictionary objectForKey:@"keyPoint_y"] floatValue];
-    point.x = x;
-    point.y = y;
-    return point;
 }
-
--(CGSize )sizeFromJSON:(NSDictionary *)dictionary{
-    CGSize size;
-    CGFloat width = [[dictionary objectForKey:@"keySize_width"] floatValue];
-    CGFloat height = [[dictionary objectForKey:@"keySize_height"] floatValue];
-    size.width = width;
-    size.height = height;
-    return size;
-}
-
--(CGRect )rectFromJSON:(NSDictionary *)dictionary{
-    CGRect rect;
-    NSDictionary  *dicForPoint = [dictionary objectForKey:@"keyPoint"];
-    NSDictionary *dicForSize = [dictionary objectForKey:@"keySize"];
-    rect.origin = [self pointFromJSON:dicForPoint];
-    rect.size = [self sizeFromJSON:dicForSize];
-    return rect;
-}
-
--(BOOL) boolFromJSON:(NSInteger )integer{
-    BOOL isOK;
-    if (integer != 0) {
-        isOK = YES;
-    }else{
-        isOK  = NO;
-    }
-    return isOK;
-}
-
--(UIImage *)imageFromJSON:(NSString *)string{
-    UIImage *image = [UIImage imageNamed:string];
-    return image;
-}
--(UIViewContentMode)modeFromJSON:(NSInteger )integer{
-    UIViewContentMode contentMode=UIViewContentModeScaleAspectFill;
-    if (integer ==0) {
-        contentMode = UIViewContentModeScaleAspectFill;
-    }
-    if (integer == 1) {
-        contentMode = UIViewContentModeScaleAspectFit;
-    }
-    if (integer == 2) {
-        contentMode = UIViewContentModeScaleToFill;
-    }
-    return contentMode;
-}
--(void)textClick{
-    //do any additional setup
-    NSLog(@"text disappear!");
-    
-}
-
 @end

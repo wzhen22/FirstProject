@@ -13,49 +13,49 @@
     UIColor *Rcolor;
     switch (num) {
         case 0:
-            Rcolor  = [UIColor blackColor];
+            Rcolor  = [UIColor blackColor];//黑色
             break;
         case 1:
-            Rcolor  = [UIColor darkGrayColor];
+            Rcolor  = [UIColor darkGrayColor];//暗灰色
             break;
         case 2:
-            Rcolor  = [UIColor lightGrayColor];
+            Rcolor  = [UIColor lightGrayColor];//淡灰色
             break;
         case 3:
-            Rcolor  = [UIColor whiteColor];
+            Rcolor  = [UIColor whiteColor];//白色
             break;
         case 4:
-            Rcolor  = [UIColor grayColor];
+            Rcolor  = [UIColor grayColor];//灰色
             break;
         case 5:
-            Rcolor  = [UIColor redColor];
+            Rcolor  = [UIColor redColor];//红色
             break;
         case 6:
-            Rcolor  = [UIColor greenColor];
+            Rcolor  = [UIColor greenColor];//绿色
             break;
         case 7:
-            Rcolor  = [UIColor blueColor];
+            Rcolor  = [UIColor blueColor];//蓝色
             break;
         case 8:
-            Rcolor  = [UIColor cyanColor];
+            Rcolor  = [UIColor cyanColor];//清亮色、蓝绿色
             break;
         case 9:
-            Rcolor  = [UIColor yellowColor];
+            Rcolor  = [UIColor yellowColor];//黄色
             break;
         case 10:
-            Rcolor  = [UIColor magentaColor];
+            Rcolor  = [UIColor magentaColor];//洋红色、品红色
             break;
         case 11:
-            Rcolor  = [UIColor orangeColor];
+            Rcolor  = [UIColor orangeColor];//橙色
             break;
         case 12:
-            Rcolor  = [UIColor purpleColor];
+            Rcolor  = [UIColor purpleColor];//紫色
             break;
         case 13:
-            Rcolor  = [UIColor brownColor];
+            Rcolor  = [UIColor brownColor];//棕色
             break;
         case 14:
-            Rcolor  = [UIColor clearColor];
+            Rcolor  = [UIColor clearColor];//空白颜色
             break;
             
         default:

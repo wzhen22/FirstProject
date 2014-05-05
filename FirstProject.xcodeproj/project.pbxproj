@@ -17,6 +17,13 @@
 		31197E62191092110002514B /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 31197E59191092110002514B /* 8.png */; };
 		31197E63191092110002514B /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 31197E5A191092110002514B /* 9.png */; };
 		31197E69191096E70002514B /* ButtonOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31197E68191096E70002514B /* ButtonOfMapper.m */; };
+		311D32B1191739AB00D9195D /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311D32B0191739AB00D9195D /* Reveal.framework */; };
+		3121655019160E2D00B3992D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3121654F19160E2D00B3992D /* CustomView.m */; };
+		3121655319160EAC00B3992D /* CustomViewOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3121655219160EAC00B3992D /* CustomViewOfMapper.m */; };
+		312165561916260800B3992D /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 312165551916260800B3992D /* CustomLabel.m */; };
+		312165591916265500B3992D /* LabelOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 312165581916265500B3992D /* LabelOfMapper.m */; };
+		3121655B19162B6600B3992D /* baseViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 3121655A19162B6600B3992D /* baseViewController.json */; };
+		312394141915E4700016B06C /* WidgetSettingForLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 312394131915E4700016B06C /* WidgetSettingForLayout.m */; };
 		312A8ED6190F7F240048E030 /* firstViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 312A8ED5190F7F240048E030 /* firstViewController.json */; };
 		312A8EE4190F80160048E030 /* image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 312A8EDB190F80160048E030 /* image.bundle */; };
 		312A8EE5190F80160048E030 /* RefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A8EDD190F80160048E030 /* RefreshFooterView.m */; };
@@ -26,6 +33,7 @@
 		312A8EEE190F81080048E030 /* CountString.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A8EEB190F81080048E030 /* CountString.m */; };
 		312A8EEF190F81080048E030 /* wDynamicLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A8EED190F81080048E030 /* wDynamicLayout.m */; };
 		312A8EF3190F826B0048E030 /* customButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 312A8EF2190F826B0048E030 /* customButton.m */; };
+		317AECDB191640F200B58136 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 317AECDA191640F200B58136 /* FirstViewController.m */; };
 		3197A8801910D5C70065C714 /* NSObject+moreMethords.m in Sources */ = {isa = PBXBuildFile; fileRef = 3197A87F1910D5C70065C714 /* NSObject+moreMethords.m */; };
 		31CCA373190F4FBD0043FEC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA372190F4FBD0043FEC5 /* Foundation.framework */; };
 		31CCA375190F4FBD0043FEC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA374190F4FBD0043FEC5 /* CoreGraphics.framework */; };
@@ -71,6 +79,19 @@
 		31197E5A191092110002514B /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		31197E67191096E70002514B /* ButtonOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonOfMapper.h; sourceTree = "<group>"; };
 		31197E68191096E70002514B /* ButtonOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonOfMapper.m; sourceTree = "<group>"; };
+		311B353B19176F3D001A822D /* HeaderForCustoms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderForCustoms.h; sourceTree = "<group>"; };
+		311D32B0191739AB00D9195D /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		3121654E19160E2D00B3992D /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		3121654F19160E2D00B3992D /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		3121655119160EAC00B3992D /* CustomViewOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewOfMapper.h; sourceTree = "<group>"; };
+		3121655219160EAC00B3992D /* CustomViewOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewOfMapper.m; sourceTree = "<group>"; };
+		312165541916260800B3992D /* CustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLabel.h; sourceTree = "<group>"; };
+		312165551916260800B3992D /* CustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLabel.m; sourceTree = "<group>"; };
+		312165571916265500B3992D /* LabelOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelOfMapper.h; sourceTree = "<group>"; };
+		312165581916265500B3992D /* LabelOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelOfMapper.m; sourceTree = "<group>"; };
+		3121655A19162B6600B3992D /* baseViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = baseViewController.json; sourceTree = "<group>"; };
+		312394121915E4700016B06C /* WidgetSettingForLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSettingForLayout.h; sourceTree = "<group>"; };
+		312394131915E4700016B06C /* WidgetSettingForLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSettingForLayout.m; sourceTree = "<group>"; };
 		312A8ED5190F7F240048E030 /* firstViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = firstViewController.json; sourceTree = "<group>"; };
 		312A8ED8190F7F710048E030 /* HeaderForMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderForMacro.h; sourceTree = "<group>"; };
 		312A8EDB190F80160048E030 /* image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = image.bundle; sourceTree = "<group>"; };
@@ -89,6 +110,8 @@
 		312A8EF1190F826B0048E030 /* customButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customButton.h; sourceTree = "<group>"; };
 		312A8EF2190F826B0048E030 /* customButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customButton.m; sourceTree = "<group>"; };
 		312A8EF5190F85BA0048E030 /* HeaderAndFooterRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderAndFooterRefresh.h; sourceTree = "<group>"; };
+		317AECD9191640F200B58136 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		317AECDA191640F200B58136 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		3197A87E1910D5C70065C714 /* NSObject+moreMethords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+moreMethords.h"; sourceTree = "<group>"; };
 		3197A87F1910D5C70065C714 /* NSObject+moreMethords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+moreMethords.m"; sourceTree = "<group>"; };
 		31CCA36F190F4FBD0043FEC5 /* FirstProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +153,7 @@
 			files = (
 				31F5DF78190FA75A001F1AB9 /* QuartzCore.framework in Frameworks */,
 				31CCA375190F4FBD0043FEC5 /* CoreGraphics.framework in Frameworks */,
+				311D32B1191739AB00D9195D /* Reveal.framework in Frameworks */,
 				31CCA377190F4FBD0043FEC5 /* UIKit.framework in Frameworks */,
 				31CCA373190F4FBD0043FEC5 /* Foundation.framework in Frameworks */,
 			);
@@ -148,11 +172,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		312394111915E3B90016B06C /* Singleton Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				312394121915E4700016B06C /* WidgetSettingForLayout.h */,
+				312394131915E4700016B06C /* WidgetSettingForLayout.m */,
+			);
+			path = "Singleton Pattern";
+			sourceTree = "<group>";
+		};
 		312A8ED7190F7F4C0048E030 /* DataSourse */ = {
 			isa = PBXGroup;
 			children = (
 				31F5DF64190F9CE1001F1AB9 /* Iamges */,
 				312A8ED8190F7F710048E030 /* HeaderForMacro.h */,
+				3121655A19162B6600B3992D /* baseViewController.json */,
 				312A8ED5190F7F240048E030 /* firstViewController.json */,
 			);
 			name = DataSourse;
@@ -163,6 +197,8 @@
 			children = (
 				31CCA387190F4FBD0043FEC5 /* ViewController.h */,
 				31CCA388190F4FBD0043FEC5 /* ViewController.m */,
+				317AECD9191640F200B58136 /* FirstViewController.h */,
+				317AECDA191640F200B58136 /* FirstViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +229,7 @@
 				312A8EED190F81080048E030 /* wDynamicLayout.m */,
 				3197A87E1910D5C70065C714 /* NSObject+moreMethords.h */,
 				3197A87F1910D5C70065C714 /* NSObject+moreMethords.m */,
+				311B353B19176F3D001A822D /* HeaderForCustoms.h */,
 			);
 			path = AutoLoadFile;
 			sourceTree = "<group>";
@@ -300,6 +337,7 @@
 		31CCA366190F4FBD0043FEC5 = {
 			isa = PBXGroup;
 			children = (
+				311D32B0191739AB00D9195D /* Reveal.framework */,
 				31CCA378190F4FBD0043FEC5 /* FirstProject */,
 				31CCA397190F4FBE0043FEC5 /* FirstProjectTests */,
 				31CCA371190F4FBD0043FEC5 /* Frameworks */,
@@ -345,6 +383,7 @@
 				312A8EDA190F80160048E030 /* CustomRefresh */,
 				312A8ED9190F7F8E0048E030 /* Controllers */,
 				312A8ED7190F7F4C0048E030 /* DataSourse */,
+				312394111915E3B90016B06C /* Singleton Pattern */,
 				312A8EE9190F81080048E030 /* AutoLoadFile */,
 				31CCA381190F4FBD0043FEC5 /* AppDelegate.h */,
 				31CCA382190F4FBD0043FEC5 /* AppDelegate.m */,
@@ -465,6 +504,8 @@
 		31F5DF4C190F9926001F1AB9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				312165541916260800B3992D /* CustomLabel.h */,
+				312165551916260800B3992D /* CustomLabel.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -479,6 +520,8 @@
 		31F5DF4E190F9934001F1AB9 /* modleFromJSON */ = {
 			isa = PBXGroup;
 			children = (
+				312165571916265500B3992D /* LabelOfMapper.h */,
+				312165581916265500B3992D /* LabelOfMapper.m */,
 			);
 			name = modleFromJSON;
 			sourceTree = "<group>";
@@ -612,6 +655,8 @@
 		31F5DF61190F99DD001F1AB9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				3121654E19160E2D00B3992D /* CustomView.h */,
+				3121654F19160E2D00B3992D /* CustomView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -626,6 +671,8 @@
 		31F5DF63190F99EB001F1AB9 /* modleFromJSON */ = {
 			isa = PBXGroup;
 			children = (
+				3121655119160EAC00B3992D /* CustomViewOfMapper.h */,
+				3121655219160EAC00B3992D /* CustomViewOfMapper.m */,
 			);
 			name = modleFromJSON;
 			sourceTree = "<group>";
@@ -732,6 +779,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31197E60191092110002514B /* 6.png in Resources */,
+				3121655B19162B6600B3992D /* baseViewController.json in Resources */,
 				31197E5E191092110002514B /* 4.png in Resources */,
 				31197E5F191092110002514B /* 5.png in Resources */,
 				31197E61191092110002514B /* 7.png in Resources */,
@@ -770,13 +818,19 @@
 				31CCA383190F4FBD0043FEC5 /* AppDelegate.m in Sources */,
 				312A8EE8190F80160048E030 /* WZRefrshConst.m in Sources */,
 				3197A8801910D5C70065C714 /* NSObject+moreMethords.m in Sources */,
+				3121655319160EAC00B3992D /* CustomViewOfMapper.m in Sources */,
 				31CCA37F190F4FBD0043FEC5 /* main.m in Sources */,
 				31CCA3B8190F50750043FEC5 /* WCustomTableView.m in Sources */,
+				3121655019160E2D00B3992D /* CustomView.m in Sources */,
 				312A8EE7190F80160048E030 /* WZRefreshBaseView.m in Sources */,
+				312394141915E4700016B06C /* WidgetSettingForLayout.m in Sources */,
 				312A8EE5190F80160048E030 /* RefreshFooterView.m in Sources */,
+				312165591916265500B3992D /* LabelOfMapper.m in Sources */,
 				31CCA3B6190F50750043FEC5 /* BaseCellMember.m in Sources */,
 				312A8EF3190F826B0048E030 /* customButton.m in Sources */,
 				31CCA3B9190F50750043FEC5 /* WFirstCustomCell.m in Sources */,
+				312165561916260800B3992D /* CustomLabel.m in Sources */,
+				317AECDB191640F200B58136 /* FirstViewController.m in Sources */,
 				312A8EE6190F80160048E030 /* RefreshHeaderView.m in Sources */,
 				31197E69191096E70002514B /* ButtonOfMapper.m in Sources */,
 				312A8EEF190F81080048E030 /* wDynamicLayout.m in Sources */,
@@ -861,7 +915,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -893,7 +947,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -905,13 +959,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 臻 王 (Q9947633KK)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FirstProject/FirstProject-Prefix.pch";
 				INFOPLIST_FILE = "FirstProject/FirstProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES;
 				LINK_WITH_STANDARD_LIBRARIES = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "BC86879B-A469-484A-8F0F-B103331B3838";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -921,13 +988,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FirstProject/FirstProject-Prefix.pch";
 				INFOPLIST_FILE = "FirstProject/FirstProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES;
 				LINK_WITH_STANDARD_LIBRARIES = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "BC86879B-A469-484A-8F0F-B103331B3838";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
