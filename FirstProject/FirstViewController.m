@@ -97,7 +97,7 @@
 -(void)customTableViewClick:(NSArray *)array{
     if (array.count) {
         for (int i =0; i<array.count; i++) {
-            if ([[array objectAtIndex:i]isKindOfClass:[customButton class]]){
+            if ([[array objectAtIndex:i]isKindOfClass:[WCustomTableView class]]){
                 WCustomTableView *cTableView = [array objectAtIndex:i];
                 [self addHeaderWithTableView:cTableView];
             }

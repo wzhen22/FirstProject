@@ -250,7 +250,7 @@
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
     for (int i = 0; i<allValue.count; i++) {
-        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:0]]) {
+        if ([[allValue objectAtIndex:i]isEqualToString:@"tableView"]) {
             a++;
             NSString *key = [NSString stringWithFormat:@"1000%d",a];
             WCustomTableView *cTableView = (WCustomTableView *)[supperView viewWithTag:[key intValue]];
