@@ -39,4 +39,6 @@
 -(NSArray *)instanceSwitchFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 //返回自定义textField的对象数组
 -(NSArray *)instanceTextFieldFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义customView的对象数组
+-(NSArray *)instanceCustomViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 @end

@@ -14,4 +14,8 @@ typedef void (^Myblock) (CustomView *);
 
 
 -(void)setimageWithView:(Myblock) block;
+
++(CustomView *)loadCustomLabelFromMode:(NSDictionary *)dictionary;
+
+
 @end

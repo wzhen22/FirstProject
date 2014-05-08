@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LabelOfMapper.h"
+#import "ButtonOfMapper.h"
+#import "ImageViewOfMapper.h"
+
+
 
 @interface CustomViewOfMapper : NSObject
 @property(nonatomic,strong) NSString *type;
@@ -22,6 +27,10 @@
 @property(nonatomic,strong) NSString *xPointOfRect;
 @property(nonatomic,strong) NSString *yPointOfRect;
 
+@property(nonatomic,strong) NSString *cornerRadies;
+
+//用于记录这个容器控件的自控件的相关数据字典
+@property(nonatomic,strong) NSDictionary *subDictionary;
 
 +(CustomViewOfMapper *)modelObjectWithDictionary:(NSDictionary *)dictionary;
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;

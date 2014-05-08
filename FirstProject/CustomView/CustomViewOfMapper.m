@@ -21,6 +21,10 @@ NSString *const kCViewCGRectY = @"CkeyCGRect_y";
 NSString *const kCViewCGRectWidth = @"CkeyCGRect_width";
 NSString *const kCViewCGRectheight = @"CkeyCGRect_height";
 
+NSString *const kCViewCornerRadies = @"CkeyRadies";
+
+NSString *const kCViewSubDictionay = @"subItems";
+
 @interface CustomViewOfMapper ()
 @property(nonatomic,strong)CountString *countSting;
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
@@ -63,6 +67,9 @@ NSString *const kCViewCGRectheight = @"CkeyCGRect_height";
         self.RGBGreen = [NSString stringWithFormat:@"%f",fRGBgreen];
         self.RGBBlue = [NSString stringWithFormat:@"%f",fRGBblue];
         self.RGB_alpha = [self objectOrNilForKey:kCViewColorRGB_alpha fromDictionary:dictionary];
+        self.cornerRadies = [self objectOrNilForKey:kCViewCornerRadies fromDictionary:dictionary];
+        
+        self.subDictionary = [self objectOrNilForKey:kCViewSubDictionay fromDictionary:dictionary];
         
     }
     return self;
@@ -80,6 +87,10 @@ NSString *const kCViewCGRectheight = @"CkeyCGRect_height";
     [mutableDict setValue:self.RGBGreen forKey:kCViewColorRGBGreen];
     [mutableDict setValue:self.RGBBlue forKey:kCViewColorRGBBlue];
     [mutableDict setValue:self.RGB_alpha forKey:kCViewColorRGB_alpha];
+    
+    [mutableDict setValue:self.cornerRadies forKeyPath:kCViewCornerRadies];
+    
+    [mutableDict setValue:self.subDictionary forKeyPath:kCViewSubDictionay];
     
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }

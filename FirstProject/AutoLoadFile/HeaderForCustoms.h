@@ -18,5 +18,6 @@
 #import "CustomSlider.h"
 #import "CustomSwitch.h"
 #import "CustomTextField.h"
+#import "CustomView.h"
 
 #endif

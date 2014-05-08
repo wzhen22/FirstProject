@@ -57,7 +57,8 @@
                         break;
                     }//加载UITextField
                     case 3:{
-                        
+                        CustomView *wView = [CustomView loadCustomLabelFromMode:AttributeDic];
+                        [baseView addSubview:wView];
                         break;
                     }//加载customView
                     case 4:{
@@ -243,6 +244,7 @@
     int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
+//    NSArray *allKeys = [dictionary allKeys];
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:0]]) {
             a++;
@@ -353,5 +355,18 @@
     }
     return mArray;
 }
-
+-(NSArray *)instanceCustomViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:3]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"400%d",a];
+            CustomView *cImage = (CustomView *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cImage];
+        }
+    }
+    return mArray;
+}
 @end

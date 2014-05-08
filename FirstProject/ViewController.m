@@ -19,6 +19,7 @@
 #import "CustomSlider.h"
 #import "CustomSwitch.h"
 #import "CustomTextField.h"
+#import "CustomView.h"
 
 @interface ViewController (){
 
@@ -77,8 +78,10 @@
     [self customSwitchClick:swtichArray];
     
     NSArray *textFieldArray = [dynamicLayout instanceTextFieldFromDic:ldic AndSupperView:self.view];
-    [self customTextField:textFieldArray];
+    [self customTextFieldClick:textFieldArray];
     
+    NSArray *customViewArray = [dynamicLayout instanceCustomViewFromDic:ldic AndSupperView:self.view];
+    [self customViewClick:customViewArray];
     
 //    UILabel *labe = [[UILabel alloc]initWithFrame:CGRectMake(130, 200, 60, 40)];
 //    labe.text = @"hdddd";
@@ -202,7 +205,7 @@
     }
 }
 //textField的事件监听描述
--(void)customTextField:(NSArray *)array{
+-(void)customTextFieldClick:(NSArray *)array{
     if (array.count) {
         for (int i =0; i<array.count; i++) {
             if ([[array objectAtIndex:i]isKindOfClass:[CustomTextField class]]){
@@ -216,4 +219,19 @@
     [sender resignFirstResponder];
     NSLog(@"resign");
 }
+//customView的事件点击描述
+-(void)customViewClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomView class]]){
+                CustomView *cView = [array objectAtIndex:i];
+                cView.customViewBlock = ^(CustomView *viwe){
+                    NSLog(@"customView be Touch!");
+                };
+            }
+        }
+    }
+
+}
+
 @end

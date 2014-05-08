@@ -16,7 +16,7 @@
 }
 +(CustomTextField *)loadCustomLabelFromMode:(NSDictionary *)dictionary{
     TextFieldOfMapper *textMapper = [[TextFieldOfMapper alloc]initWithDictionary:dictionary];
-    NSLog(@"textMapper = %@",textMapper);
+//    NSLog(@"textMapper = %@",textMapper);
     
     CustomTextField *wTextField = [[CustomTextField alloc]init];
     CGRect framRect = [wTextField rectFromModelJSON:textMapper];
