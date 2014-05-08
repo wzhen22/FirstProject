@@ -52,7 +52,8 @@
                         break;
                     }//加载UILabel
                     case 2:{
-                        
+                        CustomTextField *textField = [CustomTextField loadCustomLabelFromMode:AttributeDic];
+                        [baseView addSubview:textField];
                         break;
                     }//加载UITextField
                     case 3:{
@@ -60,34 +61,41 @@
                         break;
                     }//加载customView
                     case 4:{
-                        
+                        CustomSegmetnControl *cSegment= [CustomSegmetnControl loadCustomLabelFromMode:AttributeDic];
+                        [baseView addSubview:cSegment];
                         break;
                     }//加载UISegment自定义的
                     case 5:{
-                        
+                        CustomSlider *slider = [CustomSlider loadCustomLabelFromMode:AttributeDic];
+                        [baseView addSubview:slider];
                         break;
                     }//加载UISlider
                     case 6:{
-                        
+                        CpageControl *pageControl = [CpageControl loadCustomLabelFromMode:AttributeDic];
+                        [baseView addSubview:pageControl];
+                        break;
+
                         break;
                     }//加载UIPageControl
                     case 7:{
                         
-                        break;
+                        
                     }//加载scrollView
                     case 8:{
-                        
+                        CustomSwitch *wSwitch = [CustomSwitch loadCustomLabelFromMode:AttributeDic];
+                        [baseView addSubview:wSwitch];
                         break;
                     }//加载customSwitch
                     case 9:{
-                        
+                        CImageVIew *iamgView = [CImageVIew loadCustomLabelFromMode:AttributeDic];
+                        [baseView addSubview:iamgView];
                         break;
-                    }
+                    }//加载imageview
                     case 10:{
                         WCustomTableView *wtableView = [WCustomTableView loadTableViewWithModer:AttributeDic];
                         [baseView addSubview:wtableView];
                         break;
-                    }
+                    }//加载tableview
                     default:
                         break;
                 }
@@ -250,9 +258,9 @@
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
     for (int i = 0; i<allValue.count; i++) {
-        if ([[allValue objectAtIndex:i]isEqualToString:@"tableView"]) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:10]]) {
             a++;
-            NSString *key = [NSString stringWithFormat:@"1000%d",a];
+            NSString *key = [NSString stringWithFormat:@"1100%d",a];
             WCustomTableView *cTableView = (WCustomTableView *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cTableView];
         }
@@ -260,4 +268,90 @@
     return mArray;
 
 }
+-(NSArray *)instanceCImageViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:9]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"1000%d",a];
+            CImageVIew *cImage = (CImageVIew *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cImage];
+        }
+    }
+    return mArray;
+}
+-(NSArray *)instanceCPageControlFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:6]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"700%d",a];
+            CpageControl *cImage = (CpageControl *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cImage];
+        }
+    }
+    return mArray;
+}
+-(NSArray *)instanceCSegmentControlFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:4]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"500%d",a];
+            CustomSegmetnControl *cImage = (CustomSegmetnControl *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cImage];
+        }
+    }
+    return mArray;
+}
+-(NSArray *)instanceSliderFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:5]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"600%d",a];
+            CustomSlider *cImage = (CustomSlider *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cImage];
+        }
+    }
+    return mArray;
+}
+-(NSArray *)instanceSwitchFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:8]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"900%d",a];
+            CustomSwitch *cImage = (CustomSwitch *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cImage];
+        }
+    }
+    return mArray;
+}
+
+-(NSArray *)instanceTextFieldFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    int a = 0;
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:2]]) {
+            a++;
+            NSString *key = [NSString stringWithFormat:@"300%d",a];
+            CustomTextField *cImage = (CustomTextField *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cImage];
+        }
+    }
+    return mArray;
+}
+
 @end

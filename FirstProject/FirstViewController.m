@@ -162,7 +162,7 @@
 }
 
 -(void)doneWithView:(WZRefreshBaseView *)refreshView{
-    WCustomTableView *tableVC = (WCustomTableView *)[self.view viewWithTag:10001];
+    WCustomTableView *tableVC = (WCustomTableView *)[self.view viewWithTag:11001];
     [tableVC reloadData];
     [refreshView endRefreshing];
 }

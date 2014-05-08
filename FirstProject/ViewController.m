@@ -13,6 +13,12 @@
 #import "HeaderAndFooterRefresh.h"
 #import "customButton.h"
 #import "FirstViewController.h"
+#import "CImageVIew.h"
+#import "CpageControl.h"
+#import "CustomSegmetnControl.h"
+#import "CustomSlider.h"
+#import "CustomSwitch.h"
+#import "CustomTextField.h"
 
 @interface ViewController (){
 
@@ -47,6 +53,31 @@
     widgetArray = [dynamicLayout instanceCustomButtonFromDic:ldic AndSupperView:self.view];//返回实例化自定义按钮的对象数组
     [self customButtonClick:widgetArray];//执行响应的响应事件
     
+    
+    NSArray *imageArray = [dynamicLayout instanceCImageViewFromDic:ldic AndSupperView:self.view];
+    CImageVIew *iamgV = [imageArray objectAtIndex:0];
+    if ([iamgV isAnimating]) {
+        [iamgV performSelector:@selector(stopAnimating) withObject:nil afterDelay:2];
+        [iamgV performSelector:@selector(setImage:) withObject:[UIImage imageNamed:@"6"] afterDelay:2.1];
+    }
+    
+    NSArray *pageControlArray = [dynamicLayout instanceCPageControlFromDic:ldic AndSupperView:self.view];
+//    NSLog(@"%@",pageControlArray);
+    [self customPageControlClick:pageControlArray];
+    
+    
+    NSArray *segmentControlArray = [dynamicLayout instanceCSegmentControlFromDic:ldic AndSupperView:self.view];
+//    NSLog(@"%@",segmentControlArray);
+    [self customSegmentClick:segmentControlArray];
+    
+    NSArray *sliderArray = [dynamicLayout instanceSliderFromDic:ldic AndSupperView:self.view];
+    [self customSliderClick:sliderArray];
+    
+    NSArray *swtichArray = [dynamicLayout instanceSwitchFromDic:ldic AndSupperView:self.view];
+    [self customSwitchClick:swtichArray];
+    
+    NSArray *textFieldArray = [dynamicLayout instanceTextFieldFromDic:ldic AndSupperView:self.view];
+    [self customTextField:textFieldArray];
     
     
 //    UILabel *labe = [[UILabel alloc]initWithFrame:CGRectMake(130, 200, 60, 40)];
@@ -102,5 +133,87 @@
         
     }
 }
+//pagecontrol的事件监听描述
+-(void)customPageControlClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CpageControl class]]){
+                CpageControl *cPageControl = [array objectAtIndex:i];
+                [cPageControl addTarget:self action:@selector(pageControlClick:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+    }
 
+}
+-(void)pageControlClick:(CpageControl *)sender{
+    NSLog(@"hello");
+}
+//segmentcontrol的事件监听描述
+-(void)customSegmentClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomSegmetnControl class]]){
+                CustomSegmetnControl *cSement = [array objectAtIndex:i];
+                [cSement addTarget:self action:@selector(segmentClick:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+    }
+
+}
+-(void)segmentClick:(CustomSegmetnControl *)sender{
+    if (sender.selectedSegmentIndex == 0) {
+        NSLog(@"first");
+    }else{
+        NSLog(@"other");
+    }
+}
+//UISlider的事件监听描述
+-(void)customSliderClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomSlider class]]){
+                CustomSlider *cSlider = [array objectAtIndex:i];
+                [cSlider addTarget:self action:@selector(sliderClick:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+    }
+
+}
+-(void)sliderClick:(CustomSlider *)sender{
+    NSLog(@"sender.value = %f",sender.value);
+}
+//CustomSwitch的事件监听描述
+-(void)customSwitchClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomSwitch class]]){
+                CustomSwitch *cSwitch = [array objectAtIndex:i];
+                [cSwitch addTarget:self action:@selector(switchClick:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+    }
+
+}
+-(void)switchClick:(CustomSwitch *)sender{
+    if (sender.on) {
+        NSLog(@"选中状态");
+    }else{
+        NSLog(@"空闲状态");
+    }
+}
+//textField的事件监听描述
+-(void)customTextField:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomTextField class]]){
+                CustomTextField *cTextField = [array objectAtIndex:i];
+                [cTextField addTarget:self action:@selector(textFieldClick:) forControlEvents:UIControlEventEditingDidEndOnExit];
+            }
+        }
+    }
+}
+-(void)textFieldClick:(CustomTextField *)sender{
+    [sender resignFirstResponder];
+    NSLog(@"resign");
+}
 @end

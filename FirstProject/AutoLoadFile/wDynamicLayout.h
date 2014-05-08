@@ -27,5 +27,16 @@
 -(NSArray *)instanceCustomButtonFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 //返回自定义表视图的对象数组
 -(NSArray *)instanceCustomTabelViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
-
+//返回自定义图片视图的对象数组
+-(NSArray *)instanceCImageViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义pageControl的对象数组
+-(NSArray *)instanceCPageControlFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义segmentControl的对象数组
+-(NSArray *)instanceCSegmentControlFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义UISlider的对象数组
+-(NSArray *)instanceSliderFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义swtich的对象数组
+-(NSArray *)instanceSwitchFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义textField的对象数组
+-(NSArray *)instanceTextFieldFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 @end

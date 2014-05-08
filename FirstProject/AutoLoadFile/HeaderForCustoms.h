@@ -12,5 +12,11 @@
 #import "WCustomTableView.h"
 #import "customButton.h"
 #import "CustomLabel.h"
+#import "CImageVIew.h"
+#import "CpageControl.h"
+#import "CustomSegmetnControl.h"
+#import "CustomSlider.h"
+#import "CustomSwitch.h"
+#import "CustomTextField.h"
 
 #endif
