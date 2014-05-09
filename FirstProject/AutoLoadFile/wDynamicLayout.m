@@ -75,12 +75,11 @@
                         CpageControl *pageControl = [CpageControl loadCustomLabelFromMode:AttributeDic];
                         [baseView addSubview:pageControl];
                         break;
-
-                        break;
                     }//加载UIPageControl
                     case 7:{
-                        
-                        
+                        CustomScrollerView *scrollerView = [CustomScrollerView loadCustomScrollViewFromMode:AttributeDic];
+                        [baseView addSubview:scrollerView];
+                        break;
                     }//加载scrollView
                     case 8:{
                         CustomSwitch *wSwitch = [CustomSwitch loadCustomLabelFromMode:AttributeDic];
@@ -241,28 +240,41 @@
 }
 #pragma mark 通过tag值返回实例对象
 -(NSArray *)instanceCustomButtonFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
-    int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
-//    NSArray *allKeys = [dictionary allKeys];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:0]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"100%d",a];
+
+            NSString *key = [allKeys objectAtIndex:i];
             customButton *cButton = (customButton *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cButton];
         }
     }
     return mArray;
 }
--(NSArray *)instanceCustomTabelViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
-    int a = 0;
+-(NSArray *)instanceCustomLabelFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:1]]) {
+            
+            NSString *key = [allKeys objectAtIndex:i];
+            CustomLabel *cButton = (CustomLabel *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cButton];
+        }
+    }
+    return mArray;
+}
+-(NSArray *)instanceCustomTabelViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     NSArray *allValue = [dictionary allValues];
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:10]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"1100%d",a];
+//            NSString *key = [NSString stringWithFormat:@"1100%d",a];
+            NSString *key = [allKeys objectAtIndex:i];
             WCustomTableView *cTableView = (WCustomTableView *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cTableView];
         }
@@ -271,13 +283,13 @@
 
 }
 -(NSArray *)instanceCImageViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
-    int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:9]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"1000%d",a];
+//            NSString *key = [NSString stringWithFormat:@"1000%d",a];
+            NSString *key = [allKeys objectAtIndex:i];
             CImageVIew *cImage = (CImageVIew *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cImage];
         }
@@ -285,13 +297,13 @@
     return mArray;
 }
 -(NSArray *)instanceCPageControlFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
-    int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:6]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"700%d",a];
+//            NSString *key = [NSString stringWithFormat:@"700%d",a];
+            NSString *key = [allKeys objectAtIndex:i];
             CpageControl *cImage = (CpageControl *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cImage];
         }
@@ -299,13 +311,13 @@
     return mArray;
 }
 -(NSArray *)instanceCSegmentControlFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
-    int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:4]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"500%d",a];
+//            NSString *key = [NSString stringWithFormat:@"500%d",a];
+            NSString *key = [allKeys objectAtIndex:i];
             CustomSegmetnControl *cImage = (CustomSegmetnControl *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cImage];
         }
@@ -313,13 +325,13 @@
     return mArray;
 }
 -(NSArray *)instanceSliderFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;{
-    int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:5]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"600%d",a];
+//            NSString *key = [NSString stringWithFormat:@"600%d",a];
+            NSString *key = [allKeys objectAtIndex:i];
             CustomSlider *cImage = (CustomSlider *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cImage];
         }
@@ -327,13 +339,13 @@
     return mArray;
 }
 -(NSArray *)instanceSwitchFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
-    int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:8]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"900%d",a];
+//            NSString *key = [NSString stringWithFormat:@"900%d",a];
+            NSString *key = [allKeys objectAtIndex:i];
             CustomSwitch *cImage = (CustomSwitch *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cImage];
         }
@@ -342,13 +354,13 @@
 }
 
 -(NSArray *)instanceTextFieldFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
-    int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:2]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"300%d",a];
+//            NSString *key = [NSString stringWithFormat:@"300%d",a];
+            NSString *key = [allKeys objectAtIndex:i];
             CustomTextField *cImage = (CustomTextField *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cImage];
         }
@@ -356,14 +368,27 @@
     return mArray;
 }
 -(NSArray *)instanceCustomViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
-    int a = 0;
     NSMutableArray *mArray = [[NSMutableArray alloc]init];
     NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
     for (int i = 0; i<allValue.count; i++) {
         if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:3]]) {
-            a++;
-            NSString *key = [NSString stringWithFormat:@"400%d",a];
+//            NSString *key = [NSString stringWithFormat:@"400%d",a];
+            NSString *key = [allKeys objectAtIndex:i];
             CustomView *cImage = (CustomView *)[supperView viewWithTag:[key intValue]];
+            [mArray addObject:cImage];
+        }
+    }
+    return mArray;
+}
+-(NSArray *)instanceCustomScrollViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView{
+    NSMutableArray *mArray = [[NSMutableArray alloc]init];
+    NSArray *allValue = [dictionary allValues];
+    NSArray *allKeys = [dictionary allKeys];//所有的tag值数组
+    for (int i = 0; i<allValue.count; i++) {
+        if ([[allValue objectAtIndex:i]isEqualToString:[typeOfArray objectAtIndex:7]]) {
+            NSString *key = [allKeys objectAtIndex:i];
+            CustomScrollerView *cImage = (CustomScrollerView *)[supperView viewWithTag:[key intValue]];
             [mArray addObject:cImage];
         }
     }

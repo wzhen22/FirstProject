@@ -25,6 +25,8 @@
 
 //返回自定义按钮的对象数组
 -(NSArray *)instanceCustomButtonFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义label的对象数组
+-(NSArray *)instanceCustomLabelFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 //返回自定义表视图的对象数组
 -(NSArray *)instanceCustomTabelViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 //返回自定义图片视图的对象数组
@@ -41,4 +43,6 @@
 -(NSArray *)instanceTextFieldFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 //返回自定义customView的对象数组
 -(NSArray *)instanceCustomViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+//返回自定义scrollView的对象数组
+-(NSArray *)instanceCustomScrollViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 @end

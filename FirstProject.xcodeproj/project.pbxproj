@@ -46,6 +46,10 @@
 		312FAA101918CC9500742DE5 /* CImageVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 312FAA0F1918CC9500742DE5 /* CImageVIew.m */; };
 		3131E0B41919DAC9004E106B /* SegmentOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3131E0B31919DAC9004E106B /* SegmentOfMapper.m */; };
 		3131E0B71919DF0E004E106B /* CustomSegmetnControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3131E0B61919DF0E004E106B /* CustomSegmetnControl.m */; };
+		3138C8D2191C74B200E0E2FF /* ScrollerViewOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3138C8D1191C74B200E0E2FF /* ScrollerViewOfMapper.m */; };
+		3138C8D5191C7BE700E0E2FF /* CustomScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3138C8D4191C7BE700E0E2FF /* CustomScrollerView.m */; };
+		3138C8D8191C829B00E0E2FF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3138C8D7191C829B00E0E2FF /* SecondViewController.m */; };
+		3138C8DA191C830300E0E2FF /* secondViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 3138C8D9191C830300E0E2FF /* secondViewController.json */; };
 		317AECDB191640F200B58136 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 317AECDA191640F200B58136 /* FirstViewController.m */; };
 		3197A8801910D5C70065C714 /* NSObject+moreMethords.m in Sources */ = {isa = PBXBuildFile; fileRef = 3197A87F1910D5C70065C714 /* NSObject+moreMethords.m */; };
 		31CCA373190F4FBD0043FEC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA372190F4FBD0043FEC5 /* Foundation.framework */; };
@@ -148,6 +152,13 @@
 		3131E0B31919DAC9004E106B /* SegmentOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentOfMapper.m; sourceTree = "<group>"; };
 		3131E0B51919DF0E004E106B /* CustomSegmetnControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmetnControl.h; sourceTree = "<group>"; };
 		3131E0B61919DF0E004E106B /* CustomSegmetnControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmetnControl.m; sourceTree = "<group>"; };
+		3138C8D0191C74B200E0E2FF /* ScrollerViewOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollerViewOfMapper.h; sourceTree = "<group>"; };
+		3138C8D1191C74B200E0E2FF /* ScrollerViewOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollerViewOfMapper.m; sourceTree = "<group>"; };
+		3138C8D3191C7BE700E0E2FF /* CustomScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScrollerView.h; sourceTree = "<group>"; };
+		3138C8D4191C7BE700E0E2FF /* CustomScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrollerView.m; sourceTree = "<group>"; };
+		3138C8D6191C829B00E0E2FF /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		3138C8D7191C829B00E0E2FF /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3138C8D9191C830300E0E2FF /* secondViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = secondViewController.json; sourceTree = "<group>"; };
 		317AECD9191640F200B58136 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		317AECDA191640F200B58136 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		3197A87E1910D5C70065C714 /* NSObject+moreMethords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+moreMethords.h"; sourceTree = "<group>"; };
@@ -225,6 +236,7 @@
 				312A8ED8190F7F710048E030 /* HeaderForMacro.h */,
 				3121655A19162B6600B3992D /* baseViewController.json */,
 				312A8ED5190F7F240048E030 /* firstViewController.json */,
+				3138C8D9191C830300E0E2FF /* secondViewController.json */,
 			);
 			name = DataSourse;
 			sourceTree = "<group>";
@@ -236,6 +248,8 @@
 				31CCA388190F4FBD0043FEC5 /* ViewController.m */,
 				317AECD9191640F200B58136 /* FirstViewController.h */,
 				317AECDA191640F200B58136 /* FirstViewController.m */,
+				3138C8D6191C829B00E0E2FF /* SecondViewController.h */,
+				3138C8D7191C829B00E0E2FF /* SecondViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -596,6 +610,8 @@
 		31F5DF52190F995C001F1AB9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				3138C8D3191C7BE700E0E2FF /* CustomScrollerView.h */,
+				3138C8D4191C7BE700E0E2FF /* CustomScrollerView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -610,6 +626,8 @@
 		31F5DF54190F9968001F1AB9 /* modleFromJSON */ = {
 			isa = PBXGroup;
 			children = (
+				3138C8D0191C74B200E0E2FF /* ScrollerViewOfMapper.h */,
+				3138C8D1191C74B200E0E2FF /* ScrollerViewOfMapper.m */,
 			);
 			name = modleFromJSON;
 			sourceTree = "<group>";
@@ -843,6 +861,7 @@
 				31197E60191092110002514B /* 6.png in Resources */,
 				3121655B19162B6600B3992D /* baseViewController.json in Resources */,
 				31197E5E191092110002514B /* 4.png in Resources */,
+				3138C8DA191C830300E0E2FF /* secondViewController.json in Resources */,
 				31197E5F191092110002514B /* 5.png in Resources */,
 				31197E61191092110002514B /* 7.png in Resources */,
 				31CCA38B190F4FBD0043FEC5 /* Images.xcassets in Resources */,
@@ -894,9 +913,12 @@
 				31091532191B26D800F0C970 /* CustomTextField.m in Sources */,
 				312FAA0D1918C0CE00742DE5 /* ImageViewOfMapper.m in Sources */,
 				3131E0B71919DF0E004E106B /* CustomSegmetnControl.m in Sources */,
+				3138C8D2191C74B200E0E2FF /* ScrollerViewOfMapper.m in Sources */,
 				31175486191A271600C3FA69 /* CustomSlider.m in Sources */,
 				312165591916265500B3992D /* LabelOfMapper.m in Sources */,
+				3138C8D5191C7BE700E0E2FF /* CustomScrollerView.m in Sources */,
 				31CCA3B6190F50750043FEC5 /* BaseCellMember.m in Sources */,
+				3138C8D8191C829B00E0E2FF /* SecondViewController.m in Sources */,
 				312A8EF3190F826B0048E030 /* customButton.m in Sources */,
 				31091529191B155D00F0C970 /* SwitchOfMapper.m in Sources */,
 				31CCA3B9190F50750043FEC5 /* WFirstCustomCell.m in Sources */,

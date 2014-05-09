@@ -19,5 +19,6 @@
 #import "CustomSwitch.h"
 #import "CustomTextField.h"
 #import "CustomView.h"
+#import "CustomScrollerView.h"
 
 #endif

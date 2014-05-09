@@ -13,6 +13,8 @@
 #import "HeaderAndFooterRefresh.h"
 #import "customButton.h"
 #import "FirstViewController.h"
+#import "SecondViewController.h"
+
 #import "CImageVIew.h"
 #import "CpageControl.h"
 #import "CustomSegmetnControl.h"
@@ -111,7 +113,9 @@
                         [self presentViewController:lFirstVC animated:YES completion:nil];
                     }
                     if (cB.clickOfType == 2)  {
-                        NSLog(@"第二种响应类型");
+                        SecondViewController *lSecondVC = [[SecondViewController alloc]init];
+                        [self presentViewController:lSecondVC animated:YES completion:nil];
+
                     }
                     if (cB.clickOfType == 3) {
                         UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"warning" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];

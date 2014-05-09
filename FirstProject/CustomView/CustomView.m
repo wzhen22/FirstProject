@@ -21,8 +21,8 @@
                                             green:[cusViewMapper.RGBGreen floatValue]
                                              blue:[cusViewMapper.RGBBlue floatValue]
                                             alpha:[cusViewMapper.RGB_alpha floatValue]];
+    
     wDynamicLayout *dynamicLayout = [[wDynamicLayout alloc]init];
-//    NSLog(@"%@",cusViewMapper);
     if (cView) {
         [dynamicLayout loadItemsForGroup:cusViewMapper.subDictionary AndBaseView:cView];
     }
