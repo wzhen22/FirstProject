@@ -54,7 +54,7 @@
 		3197A8801910D5C70065C714 /* NSObject+moreMethords.m in Sources */ = {isa = PBXBuildFile; fileRef = 3197A87F1910D5C70065C714 /* NSObject+moreMethords.m */; };
 		31CCA373190F4FBD0043FEC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA372190F4FBD0043FEC5 /* Foundation.framework */; };
 		31CCA375190F4FBD0043FEC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA374190F4FBD0043FEC5 /* CoreGraphics.framework */; };
-		31CCA377190F4FBD0043FEC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA376190F4FBD0043FEC5 /* UIKit.framework */; };
+		31CCA377190F4FBD0043FEC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA376190F4FBD0043FEC5 /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		31CCA37D190F4FBD0043FEC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31CCA37B190F4FBD0043FEC5 /* InfoPlist.strings */; };
 		31CCA37F190F4FBD0043FEC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CCA37E190F4FBD0043FEC5 /* main.m */; };
 		31CCA383190F4FBD0043FEC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CCA382190F4FBD0043FEC5 /* AppDelegate.m */; };
