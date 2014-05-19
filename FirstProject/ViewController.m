@@ -14,6 +14,7 @@
 #import "customButton.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "TabBarViewController.h"
 
 #import "CImageVIew.h"
 #import "CpageControl.h"
@@ -22,6 +23,8 @@
 #import "CustomSwitch.h"
 #import "CustomTextField.h"
 #import "CustomView.h"
+
+#import <AFNetworking.h>
 
 @interface ViewController (){
 
@@ -131,6 +134,11 @@
                         }else{
                             [cB setBackgroundImage:image2 forState:UIControlStateNormal];
                         }
+                    }
+                    if (cB.clickOfType == 5)  {
+                        TabBarViewController *lSecondVC = [[TabBarViewController alloc]init];
+                        [self presentViewController:lSecondVC animated:YES completion:nil];
+                        
                     }
                     NSLog(@"____________________");
                 };

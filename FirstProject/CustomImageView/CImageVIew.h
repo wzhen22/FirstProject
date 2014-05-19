@@ -10,4 +10,6 @@
 
 @interface CImageVIew : UIImageView
 +(CImageVIew *)loadCustomLabelFromMode:(NSDictionary *)dictionary;
+
+-(void)setImageWithURL:(NSURL *)url;
 @end

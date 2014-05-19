@@ -28,6 +28,7 @@
 @property(nonatomic,strong) NSString *animationDuration;
 @property(nonatomic,strong) NSString *animationRepeateCount;
 @property(nonatomic,strong) NSString *ImageName;
+@property(nonatomic,strong) NSString *imageURL;
 @property(nonatomic,strong) NSString *ContemMode;
 
 

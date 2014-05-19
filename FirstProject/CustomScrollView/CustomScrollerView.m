@@ -23,7 +23,7 @@
                                             alpha:[sViewMapper.RGB_alpha floatValue]];
 //    wScrollerView.backgroundColor = [UIColor redColor];
     //加载其嵌套的控件
-    NSLog(@"subDictionary : %@",sViewMapper);
+//    NSLog(@"subDictionary : %@",sViewMapper);
     wDynamicLayout *dynamicLayout = [[wDynamicLayout alloc]init];
     if (wScrollerView) {
         [dynamicLayout loadItemsForGroup:sViewMapper.subDictionary AndBaseView:wScrollerView];

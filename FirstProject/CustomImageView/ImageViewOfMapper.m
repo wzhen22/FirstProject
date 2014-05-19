@@ -27,6 +27,7 @@ NSString *const kIViewAnimationImages = @"IkeyAnimationImages";
 NSString *const kIViewAnimationDuration = @"IkeyAnimationDuration";
 NSString *const kIViewAnimationRepeatCount = @"IkeyAnimationRepeatCount";
 NSString *const kIViewImageName = @"IkeyImage";
+NSString *const kIViewImageURL = @"IkeyURLString";
 NSString *const kIViewContentMode = @"IkeyContentMode";
 
 @interface ImageViewOfMapper ()
@@ -82,6 +83,7 @@ NSString *const kIViewContentMode = @"IkeyContentMode";
         
         self.animationRepeateCount = [self objectOrNilForKey:kIViewAnimationRepeatCount fromDictionary:dictionary];
         self.ImageName = [self objectOrNilForKey:kIViewImageName fromDictionary:dictionary];
+        self.imageURL = [self objectOrNilForKey:kIViewImageURL fromDictionary:dictionary];
         self.ContemMode = [self objectOrNilForKey:kIViewContentMode fromDictionary:dictionary];
         
     }
@@ -107,6 +109,7 @@ NSString *const kIViewContentMode = @"IkeyContentMode";
     [mutableDict setValue:self.animationImages forKey:kIViewAnimationImages];
     [mutableDict setValue:self.animationRepeateCount forKey:kIViewAnimationRepeatCount];
     [mutableDict setValue:self.ImageName forKey:kIViewImageName];
+    [mutableDict setValue:self.imageURL forKey:kIViewImageURL];
     [mutableDict setValue:self.ContemMode forKey:kIViewContentMode];
     
     return [NSDictionary dictionaryWithDictionary:mutableDict];

@@ -23,8 +23,14 @@
         imageView.animationRepeatCount = [imageVMapper.animationRepeateCount floatValue];
         [imageView startAnimating];
     }else{
-        imageView.image = [UIImage imageNamed:imageVMapper.ImageName];
-    
+        UIImage *dImage =[UIImage imageNamed:imageVMapper.ImageName];
+        if (dImage) {
+            imageView.image = dImage;
+        }else{
+            NSURL *urel = [NSURL URLWithString:imageVMapper.imageURL];
+            [imageView setImageWithURL:urel];
+        }
+        
     }
     imageView.tag = [imageVMapper.tag intValue];
     return imageView;
@@ -45,6 +51,18 @@
     table_rect.size.width = [imageViewOfMapper.widthOfRect floatValue];
     table_rect.size.height = [imageViewOfMapper.heightOfRect floatValue];
     return table_rect;
+}
+
+-(void)setImageWithURL:(NSURL *)url{
+    dispatch_queue_t queue = dispatch_queue_create("imageUrl", NULL);
+    dispatch_async(queue, ^{
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            self.image =image;
+        });
+    });
+    
 }
 
 /*
