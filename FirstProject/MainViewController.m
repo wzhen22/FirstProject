@@ -32,8 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.baseScrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, 810)];
-    self.baseScrollerView.backgroundColor = [UIColor whiteColor];
+    self.baseScrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-47)];
+    self.baseScrollerView.backgroundColor = [UIColor colorWithWhite:0.93 alpha:1];
+//    self.baseScrollerView.alpha = 0.5;
+    self.baseScrollerView.contentSize = CGSizeMake(320, 800);
     [self.view addSubview:self.baseScrollerView];
     
     wDynamicLayout *dynamicLayout = [[wDynamicLayout alloc]init];
@@ -293,7 +295,7 @@
         
         pageCon.currentPage = page-1;
         
-        NSLog(@"DidScroll");
+//        NSLog(@"DidScroll");
     }
 }
 
