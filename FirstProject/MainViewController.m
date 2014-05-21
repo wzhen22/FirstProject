@@ -32,6 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIBarButtonItem *rightBItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBItemClick:)];
+    self.navigationItem.rightBarButtonItem = rightBItem;
+    
     self.baseScrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-47)];
     self.baseScrollerView.backgroundColor = [UIColor colorWithWhite:0.93 alpha:1];
 //    self.baseScrollerView.alpha = 0.5;
@@ -93,6 +96,11 @@
 
     
 }
+#pragma mark NavigationItem
+-(void)rightBItemClick:(UIBarButtonItem *)sender{
+    NSLog(@"%@",sender.class);
+}
+
 #pragma mark 事件响应通过tag值取出后的描述方法
 -(void)customButtonClick:(NSArray *)array{
     if (array.count) {
@@ -129,7 +137,7 @@
                     }
                     NSLog(@"____________________");
                 };
-                
+//                [cButton myblock];
             }
         }
         
@@ -254,7 +262,7 @@
     }
     
 }
-#pragma mark ScrollView description
+
 //cutomScrollView的事件点击描述
 -(void)cScrollerViewClick:(NSArray *)array{
     if (array.count) {
@@ -275,6 +283,7 @@
     }
     
 }
+#pragma mark ScrollView description
 -(void)moreMetheard{
     timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
     
@@ -312,6 +321,7 @@
     if (timer == nil) {
 //        [self performSelectorInBackground:@selector(moreMetheard) withObject:nil];
 //        [self moreMetheard];
+        timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
     }
 }
 - (void)onTimer:(NSTimer *)timer
