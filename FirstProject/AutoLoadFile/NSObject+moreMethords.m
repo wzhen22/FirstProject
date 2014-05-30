@@ -7,8 +7,22 @@
 //
 
 #import "NSObject+moreMethords.h"
+#import "HeaderForCustoms.h"
 
 @implementation NSObject (moreMethords)
+
+-(NSDictionary *)dictionaryFromJSONName:(NSString *)nameOfJSON{
+    
+//    NSString *patrString = [NSBundle mainBundle]pathForResource:<#(NSString *)#> ofType:<#(NSString *)#>
+    
+    NSString *lstring = [[NSBundle mainBundle] resourcePath];
+    NSString *path = [lstring stringByAppendingPathComponent:nameOfJSON];
+    NSData *ldata = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
+    NSDictionary *lDictionary = [NSJSONSerialization JSONObjectWithData:ldata options:NSJSONReadingAllowFragments error:nil];
+
+    return lDictionary;
+}
+
 -(UIColor *)colorFromJSONnum:(NSInteger)num{
     UIColor *Rcolor;
     switch (num) {
@@ -169,6 +183,145 @@
         return butType;
     }
     return butType = UIButtonTypeRoundedRect;
+}
+
+#pragma mark 事件响应通过tag值取出后的描述方法
+//-(void)cScrollerViewClick:(NSArray *)array{
+//    [super cScrollerViewClick:array];
+//
+//}
+-(void)customButtonClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[customButton class]]) {
+                customButton *cButton = [array objectAtIndex:i];
+                __block customButton *cB = cButton;
+                cButton.myblock = ^(customButton *button){
+        
+//                    if (cB.clickOfType == 3) {
+//                        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"warning" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
+//                        [alertView show];
+//                        NSLog(@"%ld",(long)alertView.cancelButtonIndex);
+//                        NSLog(@"%ld",(long)alertView.firstOtherButtonIndex);
+//                    }
+                    NSLog(@"____________%@",[cB class]);
+                };
+                
+            }
+        }
+        
+    }
+}
+//pagecontrol的事件监听描述
+-(void)customPageControlClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CpageControl class]]){
+                CpageControl *cPageControl = [array objectAtIndex:i];
+                [cPageControl addTarget:self action:@selector(pageControlClick:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+    }
+    
+}
+-(void)pageControlClick:(CpageControl *)sender{
+    NSLog(@"hello");
+}
+//segmentcontrol的事件监听描述
+-(void)customSegmentClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomSegmetnControl class]]){
+                CustomSegmetnControl *cSement = [array objectAtIndex:i];
+                [cSement addTarget:self action:@selector(segmentClick:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+    }
+    
+}
+-(void)segmentClick:(CustomSegmetnControl *)sender{
+    if (sender.selectedSegmentIndex == 0) {
+        NSLog(@"first");
+    }else{
+        NSLog(@"other");
+    }
+}
+//UISlider的事件监听描述
+-(void)customSliderClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomSlider class]]){
+                CustomSlider *cSlider = [array objectAtIndex:i];
+                [cSlider addTarget:self action:@selector(sliderClick:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+    }
+    
+}
+-(void)sliderClick:(CustomSlider *)sender{
+    NSLog(@"sender.value = %f",sender.value);
+}
+//CustomSwitch的事件监听描述
+-(void)customSwitchClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomSwitch class]]){
+                CustomSwitch *cSwitch = [array objectAtIndex:i];
+                [cSwitch addTarget:self action:@selector(switchClick:) forControlEvents:UIControlEventValueChanged];
+            }
+        }
+    }
+    
+}
+-(void)switchClick:(CustomSwitch *)sender{
+    if (sender.on) {
+        NSLog(@"选中状态");
+    }else{
+        NSLog(@"空闲状态");
+    }
+}
+//textField的事件监听描述
+-(void)customTextFieldClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomTextField class]]){
+                CustomTextField *cTextField = [array objectAtIndex:i];
+                [cTextField addTarget:self action:@selector(textFieldClick:) forControlEvents:UIControlEventEditingDidEndOnExit];
+            }
+        }
+    }
+}
+-(void)textFieldClick:(CustomTextField *)sender{
+    [sender resignFirstResponder];
+    NSLog(@"resign");
+}
+//customView的事件点击描述
+-(void)customViewClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomView class]]){
+                CustomView *cView = [array objectAtIndex:i];
+                cView.customViewBlock = ^(CustomView *viwe){
+                    NSLog(@"customView be Touch!");
+                };
+            }
+        }
+    }
+    
+}
+
+
+-(void)cScrollerViewClick:(NSArray *)array{
+    if (array.count) {
+        for (int i =0; i<array.count; i++) {
+            if ([[array objectAtIndex:i]isKindOfClass:[CustomScrollerView class]]){
+                //                CustomScrollerView *cSView = [array objectAtIndex:i];
+                NSLog(@"hello cSView");
+                
+            }
+        }
+    }
+    
 }
 
 @end

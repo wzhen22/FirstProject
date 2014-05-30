@@ -27,4 +27,34 @@
 
 -(UIButtonType )buttonTypeFromMapper:(NSString *)string;//返回按钮的类型样式
 
+-(NSDictionary *)dictionaryFromJSONName:(NSString *)nameOfJSON;//返回字典，从JSON解析而来
+
+/*
+ *  用于描述所有带响应事件的控件它们的行为描述方法
+ 
+*/
+
+//customScrollView的事件监听描述
+-(void)cScrollerViewClick:(NSArray *)array;
+
+//customButton的事件监听描述
+-(void)customButtonClick:(NSArray *)array;
+
+//pagecontrol的事件监听描述
+-(void)customPageControlClick:(NSArray *)array;
+
+//segmentcontrol的事件监听描述
+-(void)customSegmentClick:(NSArray *)array;
+
+//UISlider的事件监听描述
+-(void)customSliderClick:(NSArray *)array;
+
+//CustomSwitch的事件监听描述
+-(void)customSwitchClick:(NSArray *)array;
+
+//textField的事件监听描述
+-(void)customTextFieldClick:(NSArray *)array;
+
+//customView的事件点击描述
+-(void)customViewClick:(NSArray *)array;
 @end

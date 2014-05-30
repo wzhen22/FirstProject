@@ -29,6 +29,18 @@
     return self;
 }
 
+-(void)drawingInterfaceFromJSONName:(NSString *)nameOfJSON AndBaseView:(id) baseView{
+
+    NSDictionary *lDictionary = [self dictionaryFromJSONName:nameOfJSON];
+    int rows = [[lDictionary objectForKey:@"rowsOfType"] intValue];//纪录json描绘的有多少行
+    for (int i= 0; i<rows; i++) {
+        NSString *keyOfGroupItems = [NSString stringWithFormat:@"itemsOfGroup_%d",i];
+        NSDictionary *lDic = [lDictionary objectForKey:keyOfGroupItems];
+        [self loadItemsForGroup:lDic AndBaseView:baseView];
+    }
+
+}
+
 -(void)loadItemsForGroup:(NSDictionary *)dictionary AndBaseView:(id)baseView{
 //    CountString *lCount = [[CountString alloc]init];
 //    NSArray *typeOfArray = @[@"button",@"label",@"textField",@"customView",@"segment",@"slider",@"pageControl",@"scrollView",@"switch",@"imageView",@"tableView"];//用于判断接受控键的类型
@@ -394,4 +406,22 @@
     }
     return mArray;
 }
+@end
+
+@implementation wDynamicLayout (headersClickAction)
+
+//-(void)cScrollerViewClick:(NSArray *)array{
+//    if (array.count) {
+//        for (int i =0; i<array.count; i++) {
+//            if ([[array objectAtIndex:i]isKindOfClass:[CustomScrollerView class]]){
+////                CustomScrollerView *cSView = [array objectAtIndex:i];
+//                NSLog(@"hello cSView");
+//                
+//            }
+//        }
+//    }
+//    
+//}
+
+
 @end

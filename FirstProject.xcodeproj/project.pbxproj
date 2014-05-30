@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3106C6D21937113D007B9397 /* GridHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106C6D11937113D007B9397 /* GridHeaderView.m */; };
+		3106C6D81937233F007B9397 /* ModleForHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106C6D71937233F007B9397 /* ModleForHeader.m */; };
+		3106C6DB1937238B007B9397 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3106C6DA1937238B007B9397 /* MyTableViewCell.m */; };
 		31091529191B155D00F0C970 /* SwitchOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31091528191B155D00F0C970 /* SwitchOfMapper.m */; };
 		3109152C191B1A8B00F0C970 /* CustomSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3109152B191B1A8B00F0C970 /* CustomSwitch.m */; };
 		3109152F191B230B00F0C970 /* TextFieldOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3109152E191B230B00F0C970 /* TextFieldOfMapper.m */; };
@@ -25,6 +28,7 @@
 		31197E63191092110002514B /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 31197E5A191092110002514B /* 9.png */; };
 		31197E69191096E70002514B /* ButtonOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31197E68191096E70002514B /* ButtonOfMapper.m */; };
 		311D32B1191739AB00D9195D /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311D32B0191739AB00D9195D /* Reveal.framework */; };
+		311DDEBC192EE10200B1CD4A /* HandlesClickAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 311DDEBB192EE10200B1CD4A /* HandlesClickAction.m */; };
 		311F87741919C8E9006F135B /* PageControlOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 311F87731919C8E9006F135B /* PageControlOfMapper.m */; };
 		311F87771919CA51006F135B /* CpageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 311F87761919CA51006F135B /* CpageControl.m */; };
 		3121655019160E2D00B3992D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3121654F19160E2D00B3992D /* CustomView.m */; };
@@ -74,12 +78,16 @@
 		312FAA101918CC9500742DE5 /* CImageVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 312FAA0F1918CC9500742DE5 /* CImageVIew.m */; };
 		3131E0B41919DAC9004E106B /* SegmentOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3131E0B31919DAC9004E106B /* SegmentOfMapper.m */; };
 		3131E0B71919DF0E004E106B /* CustomSegmetnControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3131E0B61919DF0E004E106B /* CustomSegmetnControl.m */; };
+		313593F119387E6900E89B76 /* LeftTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 313593F019387E6900E89B76 /* LeftTitleView.m */; };
+		313593F419387E9000E89B76 /* ModleForLeftTitleVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 313593F319387E9000E89B76 /* ModleForLeftTitleVIew.m */; };
 		3138C8D2191C74B200E0E2FF /* ScrollerViewOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3138C8D1191C74B200E0E2FF /* ScrollerViewOfMapper.m */; };
 		3138C8D5191C7BE700E0E2FF /* CustomScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3138C8D4191C7BE700E0E2FF /* CustomScrollerView.m */; };
 		3138C8D8191C829B00E0E2FF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3138C8D7191C829B00E0E2FF /* SecondViewController.m */; };
 		3138C8DA191C830300E0E2FF /* secondViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = 3138C8D9191C830300E0E2FF /* secondViewController.json */; };
 		317AECDB191640F200B58136 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 317AECDA191640F200B58136 /* FirstViewController.m */; };
 		3197A8801910D5C70065C714 /* NSObject+moreMethords.m in Sources */ = {isa = PBXBuildFile; fileRef = 3197A87F1910D5C70065C714 /* NSObject+moreMethords.m */; };
+		31A5711419388064006BDD23 /* LabelForLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A5711319388064006BDD23 /* LabelForLeftView.m */; };
+		31A57117193880C3006BDD23 /* ViewCellForLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A57116193880C3006BDD23 /* ViewCellForLeftView.m */; };
 		31CCA373190F4FBD0043FEC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA372190F4FBD0043FEC5 /* Foundation.framework */; };
 		31CCA375190F4FBD0043FEC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA374190F4FBD0043FEC5 /* CoreGraphics.framework */; };
 		31CCA377190F4FBD0043FEC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CCA376190F4FBD0043FEC5 /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -113,6 +121,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3106C6D01937113D007B9397 /* GridHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridHeaderView.h; sourceTree = "<group>"; };
+		3106C6D11937113D007B9397 /* GridHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridHeaderView.m; sourceTree = "<group>"; };
+		3106C6D61937233F007B9397 /* ModleForHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModleForHeader.h; sourceTree = "<group>"; };
+		3106C6D71937233F007B9397 /* ModleForHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModleForHeader.m; sourceTree = "<group>"; };
+		3106C6D91937238B007B9397 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		3106C6DA1937238B007B9397 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		31091527191B155D00F0C970 /* SwitchOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchOfMapper.h; sourceTree = "<group>"; };
 		31091528191B155D00F0C970 /* SwitchOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchOfMapper.m; sourceTree = "<group>"; };
 		3109152A191B1A8B00F0C970 /* CustomSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSwitch.h; sourceTree = "<group>"; };
@@ -140,6 +154,8 @@
 		31197E68191096E70002514B /* ButtonOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonOfMapper.m; sourceTree = "<group>"; };
 		311B353B19176F3D001A822D /* HeaderForCustoms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderForCustoms.h; sourceTree = "<group>"; };
 		311D32B0191739AB00D9195D /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		311DDEBA192EE10200B1CD4A /* HandlesClickAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandlesClickAction.h; sourceTree = "<group>"; };
+		311DDEBB192EE10200B1CD4A /* HandlesClickAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandlesClickAction.m; sourceTree = "<group>"; };
 		311F87721919C8E9006F135B /* PageControlOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageControlOfMapper.h; sourceTree = "<group>"; };
 		311F87731919C8E9006F135B /* PageControlOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControlOfMapper.m; sourceTree = "<group>"; };
 		311F87751919CA51006F135B /* CpageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpageControl.h; sourceTree = "<group>"; };
@@ -214,6 +230,10 @@
 		3131E0B31919DAC9004E106B /* SegmentOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentOfMapper.m; sourceTree = "<group>"; };
 		3131E0B51919DF0E004E106B /* CustomSegmetnControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmetnControl.h; sourceTree = "<group>"; };
 		3131E0B61919DF0E004E106B /* CustomSegmetnControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmetnControl.m; sourceTree = "<group>"; };
+		313593EF19387E6900E89B76 /* LeftTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTitleView.h; sourceTree = "<group>"; };
+		313593F019387E6900E89B76 /* LeftTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTitleView.m; sourceTree = "<group>"; };
+		313593F219387E9000E89B76 /* ModleForLeftTitleVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModleForLeftTitleVIew.h; sourceTree = "<group>"; };
+		313593F319387E9000E89B76 /* ModleForLeftTitleVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModleForLeftTitleVIew.m; sourceTree = "<group>"; };
 		3138C8D0191C74B200E0E2FF /* ScrollerViewOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollerViewOfMapper.h; sourceTree = "<group>"; };
 		3138C8D1191C74B200E0E2FF /* ScrollerViewOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollerViewOfMapper.m; sourceTree = "<group>"; };
 		3138C8D3191C7BE700E0E2FF /* CustomScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScrollerView.h; sourceTree = "<group>"; };
@@ -225,6 +245,10 @@
 		317AECDA191640F200B58136 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		3197A87E1910D5C70065C714 /* NSObject+moreMethords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+moreMethords.h"; sourceTree = "<group>"; };
 		3197A87F1910D5C70065C714 /* NSObject+moreMethords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+moreMethords.m"; sourceTree = "<group>"; };
+		31A5711219388064006BDD23 /* LabelForLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelForLeftView.h; sourceTree = "<group>"; };
+		31A5711319388064006BDD23 /* LabelForLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelForLeftView.m; sourceTree = "<group>"; };
+		31A57115193880C3006BDD23 /* ViewCellForLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCellForLeftView.h; sourceTree = "<group>"; };
+		31A57116193880C3006BDD23 /* ViewCellForLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCellForLeftView.m; sourceTree = "<group>"; };
 		31CCA36F190F4FBD0043FEC5 /* FirstProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CCA372190F4FBD0043FEC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		31CCA374190F4FBD0043FEC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -285,6 +309,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3106C6CC19371095007B9397 /* CustomDataGridView */ = {
+			isa = PBXGroup;
+			children = (
+				3106C6D5193712F9007B9397 /* modleFromJSON */,
+				3106C6D4193712F1007B9397 /* modle */,
+				3106C6D3193712E8007B9397 /* view */,
+			);
+			path = CustomDataGridView;
+			sourceTree = "<group>";
+		};
+		3106C6D3193712E8007B9397 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3106C6D01937113D007B9397 /* GridHeaderView.h */,
+				3106C6D11937113D007B9397 /* GridHeaderView.m */,
+				3106C6D91937238B007B9397 /* MyTableViewCell.h */,
+				3106C6DA1937238B007B9397 /* MyTableViewCell.m */,
+				313593EF19387E6900E89B76 /* LeftTitleView.h */,
+				313593F019387E6900E89B76 /* LeftTitleView.m */,
+				31A5711219388064006BDD23 /* LabelForLeftView.h */,
+				31A5711319388064006BDD23 /* LabelForLeftView.m */,
+				31A57115193880C3006BDD23 /* ViewCellForLeftView.h */,
+				31A57116193880C3006BDD23 /* ViewCellForLeftView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		3106C6D4193712F1007B9397 /* modle */ = {
+			isa = PBXGroup;
+			children = (
+				3106C6D61937233F007B9397 /* ModleForHeader.h */,
+				3106C6D71937233F007B9397 /* ModleForHeader.m */,
+				313593F219387E9000E89B76 /* ModleForLeftTitleVIew.h */,
+				313593F319387E9000E89B76 /* ModleForLeftTitleVIew.m */,
+			);
+			name = modle;
+			sourceTree = "<group>";
+		};
+		3106C6D5193712F9007B9397 /* modleFromJSON */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modleFromJSON;
+			sourceTree = "<group>";
+		};
 		312394111915E3B90016B06C /* Singleton Pattern */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +446,8 @@
 				31091533191B275D00F0C970 /* UIImage+Additions.h */,
 				31091534191B275D00F0C970 /* UIImage+Additions.m */,
 				311B353B19176F3D001A822D /* HeaderForCustoms.h */,
+				311DDEBA192EE10200B1CD4A /* HandlesClickAction.h */,
+				311DDEBB192EE10200B1CD4A /* HandlesClickAction.m */,
 			);
 			path = AutoLoadFile;
 			sourceTree = "<group>";
@@ -518,6 +589,7 @@
 		31CCA378190F4FBD0043FEC5 /* FirstProject */ = {
 			isa = PBXGroup;
 			children = (
+				3106C6CC19371095007B9397 /* CustomDataGridView */,
 				312A8F11190F87CF0048E030 /* CustomView */,
 				312A8F10190F87C20048E030 /* CustomTextfield */,
 				312A8EFC190F87970048E030 /* CustomSwitch */,
@@ -1071,6 +1143,8 @@
 				312972DA1929A1DE0000788F /* MainViewController.m in Sources */,
 				31CCA3B7190F50750043FEC5 /* FirstCellMember.m in Sources */,
 				31CCA389190F4FBD0043FEC5 /* ViewController.m in Sources */,
+				3106C6D81937233F007B9397 /* ModleForHeader.m in Sources */,
+				313593F119387E6900E89B76 /* LeftTitleView.m in Sources */,
 				312973091929AC820000788F /* LiveViewController.m in Sources */,
 				3129730C1929AC970000788F /* ShoppingCarViewController.m in Sources */,
 				3109152C191B1A8B00F0C970 /* CustomSwitch.m in Sources */,
@@ -1085,9 +1159,11 @@
 				31091535191B275D00F0C970 /* UIImage+Additions.m in Sources */,
 				3121655019160E2D00B3992D /* CustomView.m in Sources */,
 				3131E0B41919DAC9004E106B /* SegmentOfMapper.m in Sources */,
+				3106C6DB1937238B007B9397 /* MyTableViewCell.m in Sources */,
 				312A8EE7190F80160048E030 /* WZRefreshBaseView.m in Sources */,
 				312394141915E4700016B06C /* WidgetSettingForLayout.m in Sources */,
 				312A8EE5190F80160048E030 /* RefreshFooterView.m in Sources */,
+				313593F419387E9000E89B76 /* ModleForLeftTitleVIew.m in Sources */,
 				31091532191B26D800F0C970 /* CustomTextField.m in Sources */,
 				312FAA0D1918C0CE00742DE5 /* ImageViewOfMapper.m in Sources */,
 				3131E0B71919DF0E004E106B /* CustomSegmetnControl.m in Sources */,
@@ -1101,13 +1177,17 @@
 				31091529191B155D00F0C970 /* SwitchOfMapper.m in Sources */,
 				31CCA3B9190F50750043FEC5 /* WFirstCustomCell.m in Sources */,
 				312165561916260800B3992D /* CustomLabel.m in Sources */,
+				31A57117193880C3006BDD23 /* ViewCellForLeftView.m in Sources */,
 				312973061929AC3A0000788F /* TabBarViewController.m in Sources */,
 				317AECDB191640F200B58136 /* FirstViewController.m in Sources */,
 				311F87741919C8E9006F135B /* PageControlOfMapper.m in Sources */,
 				31175483191A1DE200C3FA69 /* SliderOfMapper.m in Sources */,
 				312A8EE6190F80160048E030 /* RefreshHeaderView.m in Sources */,
+				31A5711419388064006BDD23 /* LabelForLeftView.m in Sources */,
 				31197E69191096E70002514B /* ButtonOfMapper.m in Sources */,
 				312A8EEF190F81080048E030 /* wDynamicLayout.m in Sources */,
+				3106C6D21937113D007B9397 /* GridHeaderView.m in Sources */,
+				311DDEBC192EE10200B1CD4A /* HandlesClickAction.m in Sources */,
 				3109152F191B230B00F0C970 /* TextFieldOfMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1252,7 +1332,7 @@
 					SystemConfiguration,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BC86879B-A469-484A-8F0F-B103331B3838";
+				PROVISIONING_PROFILE = "96FC8A2C-EDF1-4402-A396-045E889D7141";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -1265,6 +1345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1290,7 +1371,7 @@
 					SystemConfiguration,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BC86879B-A469-484A-8F0F-B103331B3838";
+				PROVISIONING_PROFILE = "96FC8A2C-EDF1-4402-A396-045E889D7141";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;

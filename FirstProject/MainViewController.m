@@ -54,11 +54,16 @@
         [dynamicLayout loadItemsForGroup:lDic AndBaseView:self.baseScrollerView];
     }
     
+//    //通过JSON名称解析出需要的字典
+//    NSString *nameJstring = @"MainController.json";
+//    NSDictionary *lDictionary = [self dictionaryFromJSONName:nameJstring];
+//    //利用载入类描绘出视图界面
+//    [dynamicLayout drawingInterfaceFromJSONName:nameJstring AndBaseView:self.baseScrollerView];
     
-    NSDictionary *ldic = [dynamicLayout getItemsOfGroup:lDictionary];//直接调用解析的json文件的第一个字典----返回所有控件的tag值与类型的字典
+    //直接调用解析的json文件的第一个字典----返回所有控件的tag值与类型的字典
+    NSDictionary *ldic = [dynamicLayout getItemsOfGroup:lDictionary];
     NSLog(@"***************%@",ldic);
-    
-    
+
     NSArray *widgetArray = [dynamicLayout instanceCustomButtonFromDic:ldic AndSupperView:self.view];//返回实例化自定义按钮的对象数组
     [self customButtonClick:widgetArray];//执行响应的响应事件
     
@@ -149,6 +154,7 @@
         for (int i =0; i<array.count; i++) {
             if ([[array objectAtIndex:i]isKindOfClass:[CpageControl class]]){
                 CpageControl *cPageControl = [array objectAtIndex:i];
+                
                 [cPageControl addTarget:self action:@selector(pageControlClick:) forControlEvents:UIControlEventValueChanged];
                 if (i==0) {
                     pageCon = cPageControl;

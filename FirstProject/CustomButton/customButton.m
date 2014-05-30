@@ -32,6 +32,9 @@
     button.titleLabel.font = [UIFont fontWithName:buttonOfMapper.textFont size:[buttonOfMapper.textSize intValue]];
     
     button.clickOfType = [buttonOfMapper.clickNum integerValue];
+    button.myblock = ^(customButton *button){
+        NSLog(@"customButton 的初始响应设定");
+    };
     return button;
 }
 - (id)initWithFrame:(CGRect)frame

@@ -31,6 +31,15 @@
     wTextField.textAlignment = [wTextField acheiveTextAlignmentFromJSONnum:[textMapper.aligement integerValue]];
     
     wTextField.tag = [textMapper.tag integerValue];
+//    UIImageView *imageView = [[UIImageView alloc]init];
+//    imageView.backgroundColor = [UIColor redColor];
+//    imageView.frame = CGRectMake(0, 0, 40, 40);
+//    wTextField.leftView = imageView;
+    
+//    UIView *TleftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 20, 80)];
+//    TleftView.backgroundColor = [UIColor grayColor];
+//    wTextField.leftView = TleftView;
+//    wTextField.leftViewMode = UITextFieldViewModeWhileEditing;
     return wTextField;
 }
 - (id)initWithFrame:(CGRect)frame {
@@ -106,6 +115,28 @@
     table_rect.size.width = [textFieldOfMapper.widthOfRect floatValue];
     table_rect.size.height = [textFieldOfMapper.heightOfRect floatValue];
     return table_rect;
+}
+
+//返回UITextFieldViewMode的私有方法，通过解析JSON文件的传值
+
+-(UITextFieldViewMode)textFieldViewModeFromJSON:(NSInteger)integer{
+
+    UITextFieldViewMode tfVIEWMODE = UITextFieldViewModeNever;
+    switch (integer) {
+        case 1:
+            tfVIEWMODE = UITextFieldViewModeWhileEditing;
+            break;
+        case 2:
+            tfVIEWMODE = UITextFieldViewModeUnlessEditing;
+            break;
+        case 3:
+            tfVIEWMODE = UITextFieldViewModeAlways;
+            break;
+        default:
+            tfVIEWMODE = UITextFieldViewModeNever;
+            break;
+    }
+    return tfVIEWMODE;
 }
 
 #pragma mark textField delegate

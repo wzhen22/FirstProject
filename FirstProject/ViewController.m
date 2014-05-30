@@ -41,24 +41,31 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     wDynamicLayout *dynamicLayout = [[wDynamicLayout alloc]init];
-    NSString *lstring = [[NSBundle mainBundle] resourcePath];
-    NSString *path = [lstring stringByAppendingPathComponent:@"baseViewController.json"];
-    NSData *ldata = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
-    NSDictionary *lDictionary = [NSJSONSerialization JSONObjectWithData:ldata options:NSJSONReadingAllowFragments error:nil];
     
-    int rows = [[lDictionary objectForKey:@"rowsOfType"] intValue];//纪录json描绘的有多少行
-    for (int i= 0; i<rows; i++) {
-        NSString *keyOfGroupItems = [NSString stringWithFormat:@"itemsOfGroup_%d",i];
-        NSDictionary *lDic = [lDictionary objectForKey:keyOfGroupItems];
-        [dynamicLayout loadItemsForGroup:lDic AndBaseView:self.view];
-    }
     
+//    NSString *lstring = [[NSBundle mainBundle] resourcePath];
+//    NSString *path = [lstring stringByAppendingPathComponent:@"baseViewController.json"];
+//    NSData *ldata = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
+//    NSDictionary *lDictionary = [NSJSONSerialization JSONObjectWithData:ldata options:NSJSONReadingAllowFragments error:nil];
+//    
+//    int rows = [[lDictionary objectForKey:@"rowsOfType"] intValue];//纪录json描绘的有多少行
+//    for (int i= 0; i<rows; i++) {
+//        NSString *keyOfGroupItems = [NSString stringWithFormat:@"itemsOfGroup_%d",i];
+//        NSDictionary *lDic = [lDictionary objectForKey:keyOfGroupItems];
+//        [dynamicLayout loadItemsForGroup:lDic AndBaseView:self.view];
+//    }
+    
+    //通过JSON名称解析出需要的字典
+    NSString *nameJstring = @"MainController.json";
+    NSDictionary *lDictionary = [self dictionaryFromJSONName:nameJstring];
+    //利用载入类描绘出视图界面
+    [dynamicLayout drawingInterfaceFromJSONName:nameJstring AndBaseView:self.view];
     
     NSDictionary *ldic = [dynamicLayout getItemsOfGroup:lDictionary];//直接调用解析的json文件的第一个字典----返回所有控件的tag值与类型的字典
     NSLog(@"***************%@",ldic);
     widgetArray = [dynamicLayout instanceCustomButtonFromDic:ldic AndSupperView:self.view];//返回实例化自定义按钮的对象数组
     [self customButtonClick:widgetArray];//执行响应的响应事件
-    
+
     
     NSArray *imageArray = [dynamicLayout instanceCImageViewFromDic:ldic AndSupperView:self.view];
     CImageVIew *iamgV = [imageArray objectAtIndex:0];
@@ -87,7 +94,7 @@
     
     NSArray *customViewArray = [dynamicLayout instanceCustomViewFromDic:ldic AndSupperView:self.view];
     [self customViewClick:customViewArray];
-    
+
 //    UILabel *labe = [[UILabel alloc]initWithFrame:CGRectMake(130, 200, 60, 40)];
 //    labe.text = @"hdddd";
 //    labe.backgroundColor = [UIColor grayColor];
@@ -103,6 +110,10 @@
 }
 
 #pragma mark 事件响应通过tag值取出后的描述方法
+//-(void)cScrollerViewClick:(NSArray *)array{
+//    [super cScrollerViewClick:array];
+//    
+//}
 -(void)customButtonClick:(NSArray *)array{
     if (array.count) {
         for (int i =0; i<array.count; i++) {
@@ -111,6 +122,7 @@
                 __block customButton *cB = cButton;
                 cButton.myblock = ^(customButton *button){
                     //        [cB performSelector:@selector(buttonClick:)];
+//                    [button setShowsTouchWhenHighlighted:YES];
                     if (cB.clickOfType == 1) {
                         FirstViewController *lFirstVC = [[FirstViewController alloc]init];
                         [self presentViewController:lFirstVC animated:YES completion:nil];

@@ -16,6 +16,8 @@
 //@property(nonatomic,assign) NSInteger numOfItems;
 
 
+-(void)drawingInterfaceFromJSONName:(NSString *)nameOfJSON AndBaseView:(id) baseView;
+
 -(void)loadItemsForGroup:(NSDictionary *)dictionary AndBaseView:(id)baseView;
 -(id) viewOfItems:(NSDictionary *)array andTag:(NSInteger )num;
 -(NSDictionary *)getItemsOfGroup:(NSDictionary *)wDictionary;//获取每个控键的类型和tag值
@@ -45,4 +47,9 @@
 -(NSArray *)instanceCustomViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
 //返回自定义scrollView的对象数组
 -(NSArray *)instanceCustomScrollViewFromDic:(NSDictionary *)dictionary AndSupperView:(id)supperView;
+@end
+@interface wDynamicLayout  (headersClickAction)
+
+//-(void)cScrollerViewClick:(NSArray *)array;
+
 @end

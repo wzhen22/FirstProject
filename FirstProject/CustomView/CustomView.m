@@ -28,6 +28,9 @@
     }
     cView.layer.cornerRadius = [cusViewMapper.cornerRadies floatValue];
     cView.tag = [cusViewMapper.tag integerValue];
+    cView.customViewBlock = ^(CustomView *customView){
+        NSLog(@"CustomView 的初始响应设定");
+    };
     return cView;
 }
 - (id)initWithFrame:(CGRect)frame

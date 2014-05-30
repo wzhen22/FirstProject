@@ -273,6 +273,7 @@
     }
     
 }
+
 //cutomScrollView的事件点击描述
 -(void)cScrollerViewClick:(NSArray *)array{
     if (array.count) {
