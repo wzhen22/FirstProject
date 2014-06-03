@@ -34,7 +34,7 @@
     }
     return self;
 }
-
+//daixiugai
 -(id)init{
     self = [super init];
     if (self) {
