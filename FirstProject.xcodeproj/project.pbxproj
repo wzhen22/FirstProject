@@ -15,6 +15,7 @@
 		3109152F191B230B00F0C970 /* TextFieldOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3109152E191B230B00F0C970 /* TextFieldOfMapper.m */; };
 		31091532191B26D800F0C970 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 31091531191B26D800F0C970 /* CustomTextField.m */; };
 		31091535191B275D00F0C970 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 31091534191B275D00F0C970 /* UIImage+Additions.m */; };
+		310EB5B2193D9D7F005AEB88 /* ThirtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 310EB5B1193D9D7F005AEB88 /* ThirtViewController.m */; };
 		31175483191A1DE200C3FA69 /* SliderOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 31175482191A1DE200C3FA69 /* SliderOfMapper.m */; };
 		31175486191A271600C3FA69 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 31175485191A271600C3FA69 /* CustomSlider.m */; };
 		31197E5B191092110002514B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 31197E52191092110002514B /* 1.png */; };
@@ -31,6 +32,7 @@
 		311DDEBC192EE10200B1CD4A /* HandlesClickAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 311DDEBB192EE10200B1CD4A /* HandlesClickAction.m */; };
 		311F87741919C8E9006F135B /* PageControlOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 311F87731919C8E9006F135B /* PageControlOfMapper.m */; };
 		311F87771919CA51006F135B /* CpageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 311F87761919CA51006F135B /* CpageControl.m */; };
+		311FD3D1193D73D1004DE4F9 /* GridMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 311FD3D0193D73D1004DE4F9 /* GridMainTableView.m */; };
 		3121655019160E2D00B3992D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3121654F19160E2D00B3992D /* CustomView.m */; };
 		3121655319160EAC00B3992D /* CustomViewOfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3121655219160EAC00B3992D /* CustomViewOfMapper.m */; };
 		312165561916260800B3992D /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 312165551916260800B3992D /* CustomLabel.m */; };
@@ -137,6 +139,8 @@
 		31091531191B26D800F0C970 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		31091533191B275D00F0C970 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
 		31091534191B275D00F0C970 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		310EB5B0193D9D7F005AEB88 /* ThirtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirtViewController.h; sourceTree = "<group>"; };
+		310EB5B1193D9D7F005AEB88 /* ThirtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirtViewController.m; sourceTree = "<group>"; };
 		31175481191A1DE200C3FA69 /* SliderOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderOfMapper.h; sourceTree = "<group>"; };
 		31175482191A1DE200C3FA69 /* SliderOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderOfMapper.m; sourceTree = "<group>"; };
 		31175484191A271600C3FA69 /* CustomSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 		311F87731919C8E9006F135B /* PageControlOfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControlOfMapper.m; sourceTree = "<group>"; };
 		311F87751919CA51006F135B /* CpageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpageControl.h; sourceTree = "<group>"; };
 		311F87761919CA51006F135B /* CpageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CpageControl.m; sourceTree = "<group>"; };
+		311FD3CF193D73D1004DE4F9 /* GridMainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridMainTableView.h; sourceTree = "<group>"; };
+		311FD3D0193D73D1004DE4F9 /* GridMainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridMainTableView.m; sourceTree = "<group>"; };
 		3121654E19160E2D00B3992D /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		3121654F19160E2D00B3992D /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		3121655119160EAC00B3992D /* CustomViewOfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewOfMapper.h; sourceTree = "<group>"; };
@@ -322,6 +328,8 @@
 		3106C6D3193712E8007B9397 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				311FD3CF193D73D1004DE4F9 /* GridMainTableView.h */,
+				311FD3D0193D73D1004DE4F9 /* GridMainTableView.m */,
 				3106C6D01937113D007B9397 /* GridHeaderView.h */,
 				3106C6D11937113D007B9397 /* GridHeaderView.m */,
 				3106C6D91937238B007B9397 /* MyTableViewCell.h */,
@@ -413,6 +421,8 @@
 				317AECDA191640F200B58136 /* FirstViewController.m */,
 				3138C8D6191C829B00E0E2FF /* SecondViewController.h */,
 				3138C8D7191C829B00E0E2FF /* SecondViewController.m */,
+				310EB5B0193D9D7F005AEB88 /* ThirtViewController.h */,
+				310EB5B1193D9D7F005AEB88 /* ThirtViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1177,7 +1187,9 @@
 				31091529191B155D00F0C970 /* SwitchOfMapper.m in Sources */,
 				31CCA3B9190F50750043FEC5 /* WFirstCustomCell.m in Sources */,
 				312165561916260800B3992D /* CustomLabel.m in Sources */,
+				310EB5B2193D9D7F005AEB88 /* ThirtViewController.m in Sources */,
 				31A57117193880C3006BDD23 /* ViewCellForLeftView.m in Sources */,
+				311FD3D1193D73D1004DE4F9 /* GridMainTableView.m in Sources */,
 				312973061929AC3A0000788F /* TabBarViewController.m in Sources */,
 				317AECDB191640F200B58136 /* FirstViewController.m in Sources */,
 				311F87741919C8E9006F135B /* PageControlOfMapper.m in Sources */,

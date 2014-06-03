@@ -30,6 +30,7 @@
             
             GridHeaderView *headView=[[GridHeaderView alloc]initWithFrame:CGRectMake(i*kWidth, 0, kWidth-kWidthMargin, kHeight+kHeightMargin)];
             headView.delegate=self;
+            headView.num = @"101";
             headView.backgroundColor=[UIColor whiteColor];
             [self.contentView addSubview:headView];
         }

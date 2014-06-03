@@ -14,6 +14,7 @@
 #import "customButton.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "ThirtViewController.h"
 #import "TabBarViewController.h"
 
 #import "CImageVIew.h"
@@ -56,7 +57,7 @@
 //    }
     
     //通过JSON名称解析出需要的字典
-    NSString *nameJstring = @"MainController.json";
+    NSString *nameJstring = @"baseViewController.json";
     NSDictionary *lDictionary = [self dictionaryFromJSONName:nameJstring];
     //利用载入类描绘出视图界面
     [dynamicLayout drawingInterfaceFromJSONName:nameJstring AndBaseView:self.view];
@@ -151,6 +152,10 @@
                         TabBarViewController *lSecondVC = [[TabBarViewController alloc]init];
                         [self presentViewController:lSecondVC animated:YES completion:nil];
                         
+                    }
+                    if (cB.clickOfType == 6) {
+                        ThirtViewController *thirtVC = [[ThirtViewController alloc]init];
+                        [self presentViewController:thirtVC animated:YES completion:nil];
                     }
                     NSLog(@"____________________");
                 };

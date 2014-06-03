@@ -10,4 +10,6 @@
 
 @interface LeftTitleView : UIView
 
+@property(nonatomic,strong)UITableView *leftTableView;
+
 @end

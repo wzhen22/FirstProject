@@ -34,6 +34,25 @@
     }
     return self;
 }
+
+-(id)init{
+    self = [super init];
+    if (self) {
+        self.detailRoom = [[UILabel alloc]initWithFrame:CGRectZero];
+        self.detailRoom.font=[UIFont systemFontOfSize:12];
+        self.detailRoom.center=CGPointMake(self.frame.size.width*0.5, self.frame.size.height-self.frame.size.height);
+        [self addSubview:self.detailRoom];
+        
+        [self addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapView:)]];
+
+    }
+    return self;
+}
+- (void)layoutSubviews{
+    [super layoutSubviews];
+//    self.detailRoom.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    
+}
 -(void)tapView:(UITapGestureRecognizer *)tap
 {
     CGPoint point=[tap locationInView:self];

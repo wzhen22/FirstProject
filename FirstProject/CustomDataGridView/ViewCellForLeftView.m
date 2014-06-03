@@ -15,8 +15,8 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.titleLabel = [[LabelForLeftView alloc]initWithFrame:CGRectMake(17, -1, self.frame.size.width, self.frame.size.height * 0.3)];
-        [self.titleLabel setVerticalAlignment:VerticalAlignmentTop];
+        self.titleLabel = [[LabelForLeftView alloc]initWithFrame:CGRectMake(17, 0, self.frame.size.width, self.frame.size.height)];
+        [self.titleLabel setVerticalAlignment:VerticalAlignmentMiddle];
         [self.contentView addSubview:self.titleLabel];
     }
     return self;

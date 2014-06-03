@@ -34,6 +34,9 @@
     [super viewDidLoad];
     UIBarButtonItem *rightBItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBItemClick:)];
     self.navigationItem.rightBarButtonItem = rightBItem;
+    UIBarButtonItem *leftBItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(leftBitemClick:)];
+    self.navigationItem.leftBarButtonItem = leftBItem;
+    
     
     self.baseScrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-47)];
     self.baseScrollerView.backgroundColor = [UIColor colorWithWhite:0.93 alpha:1];
@@ -105,7 +108,9 @@
 -(void)rightBItemClick:(UIBarButtonItem *)sender{
     NSLog(@"%@",sender.class);
 }
-
+-(void)leftBitemClick:(UIBarButtonItem *)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 #pragma mark 事件响应通过tag值取出后的描述方法
 -(void)customButtonClick:(NSArray *)array{
     if (array.count) {
