@@ -30,9 +30,26 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    GridMainTableView *GridTV = [[GridMainTableView alloc]initWithFrame:self.view.bounds];
+//    self.view.bounds
+    GridMainTableView *GridTV = [[GridMainTableView alloc]initWithFrame:CGRectMake(0, 0, 320, 400)];
     [self.view addSubview:GridTV];
     
+    
+    UITapGestureRecognizer *lTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+    UIImageView *lImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"x_alt_32x32"]];
+    lImageView.frame = CGRectMake(260, 500, 40, 40);
+    lImageView.alpha = 0.6;
+    [lImageView addGestureRecognizer:lTapGesture];
+    lImageView.userInteractionEnabled = YES;
+    [self.view addSubview:lImageView];
+
+    
+    
+    
+}
+
+-(void)tapClick:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

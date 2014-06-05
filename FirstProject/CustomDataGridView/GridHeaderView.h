@@ -14,10 +14,18 @@
 
 @end
 
+typedef NS_ENUM(NSInteger, layoutMethods){
+    loadHeaderForGridView = 0,
+    loadSubCellForGridView,
+};
+
 @interface GridHeaderView : UIView
 
 @property(nonatomic,strong) NSString *num;
 @property(nonatomic,strong) NSString *detail;
-@property(nonatomic,assign) id <GridHeaderViewDelegate> delegate;
 
+@property(nonatomic,strong) NSString *dataString;
+
+@property(nonatomic,assign) id <GridHeaderViewDelegate> delegate;
+@property(nonatomic,assign) layoutMethods subLayoutMethod;
 @end

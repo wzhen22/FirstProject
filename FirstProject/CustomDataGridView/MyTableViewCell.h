@@ -23,5 +23,5 @@
 @property(nonatomic,strong) NSMutableArray *currentTime;
 @property(nonatomic,assign) NSInteger index;
 
-
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier andCellNum:(NSInteger)integer;
 @end

@@ -27,12 +27,12 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.TimesForLabel = [NSMutableArray array];
-        for (int i=0; i<= 20; i++) {//i控制输入的个数，在此作变量修改（后期）
-            int cTime = i*30+510;
-            NSString *timelabel = [NSString stringWithFormat:@"%d:%2d",cTime/60,cTime%60];
-            [self.TimesForLabel addObject:timelabel];
-        }
+//        self.TimesForLabel = [NSMutableArray array];
+//        for (int i=0; i<= 20; i++) {//i控制输入的个数，在此作变量修改（后期）
+//            int cTime = i*30+510;
+//            NSString *timelabel = [NSString stringWithFormat:@"%d:%02d",cTime/60,cTime%60];
+//            [self.TimesForLabel addObject:timelabel];
+//        }
         
         self.leftTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) style:UITableViewStylePlain];
         self.leftTableView.delegate = self;
@@ -46,7 +46,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return _ShowLeftTitleArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -57,8 +57,15 @@
         cell = [[ViewCellForLeftView alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
         
     }
-    cell.titleLabel.text = self.TimesForLabel[indexPath.row];
+//    cell.titleLabel.text = self.TimesForLabel[indexPath.row];
+    cell.titleLabel.text = self.ShowLeftTitleArray[indexPath.row];
     return cell;
+}
+
+-(void)setShowLeftTitleArray:(NSArray *)ShowLeftTitleArray{
+    
+    _ShowLeftTitleArray = ShowLeftTitleArray;
+    
 }
 
 /*

@@ -11,5 +11,5 @@
 @interface LeftTitleView : UIView
 
 @property(nonatomic,strong)UITableView *leftTableView;
-
+@property(nonatomic,retain)NSArray *ShowLeftTitleArray;
 @end

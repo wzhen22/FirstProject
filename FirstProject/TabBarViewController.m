@@ -12,6 +12,8 @@
 #import "ShoppingCarViewController.h"
 #import "MyGoodsViewController.h"
 
+#import "RegisterViewController.h"
+
 
 @interface TabBarViewController ()
 
@@ -51,12 +53,36 @@
     [goodsVC setTabBarItem:imageViewItem4];
     UINavigationController *goodsNVC = [[UINavigationController alloc]initWithRootViewController:goodsVC];
     
-    NSArray *items = @[mainNVC,liveNVC,shopCarNVC,goodsNVC];
+    RegisterViewController *registerViewController = [[RegisterViewController alloc] init];
+    UITabBarItem *imageViewItem5 = [[UITabBarItem alloc]initWithTitle:@"登陆" image:[UIImage imageNamed:@"heart_stroke_24x21"] tag:11];
+    [registerViewController setTabBarItem:imageViewItem5];
+
+    NSArray *items = @[mainNVC,liveNVC,shopCarNVC,goodsNVC,registerViewController];
     
+    self.delegate = self;
     [self setViewControllers:items animated:YES];
-    
+    UITapGestureRecognizer *lTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+    UIImageView *lImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"x_alt_32x32"]];
+    lImageView.frame = CGRectMake(260, 460, 40, 40);
+    lImageView.alpha = 0.6;
+    [lImageView addGestureRecognizer:lTapGesture];
+    lImageView.userInteractionEnabled = YES;
+    [self.view addSubview:lImageView];
+
 }
 
+-(void)tapClick:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+//UITabBarContrller的代理设置，当点击选择不同的ViewController 时执行
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"%lu",(unsigned long)tabBarController.selectedIndex);
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

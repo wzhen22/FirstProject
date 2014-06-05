@@ -22,15 +22,16 @@
 #define kWidthMargin 1
 #define kHeightMargin 3
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier andCellNum:(NSInteger)integer
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        for(int i=0;i<20;i++){
+        for(int i=0;i<integer;i++){
             
             GridHeaderView *headView=[[GridHeaderView alloc]initWithFrame:CGRectMake(i*kWidth, 0, kWidth-kWidthMargin, kHeight+kHeightMargin)];
+            headView.subLayoutMethod = 1;//用于加载数据显示的子视图设置
             headView.delegate=self;
-            headView.num = @"101";
+            headView.dataString = @"23";
             headView.backgroundColor=[UIColor whiteColor];
             [self.contentView addSubview:headView];
         }

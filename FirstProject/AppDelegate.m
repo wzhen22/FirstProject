@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "RegisterViewController.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,13 @@
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     return YES;
+//    RegisterViewController *registerViewController = [[RegisterViewController alloc] init];
+//    self.window.rootViewController = registerViewController;
+//    
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+//    return YES;
+
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
