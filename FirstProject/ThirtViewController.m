@@ -31,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.view.bounds
+    self.view.backgroundColor = [UIColor whiteColor];
     GridMainTableView *GridTV = [[GridMainTableView alloc]initWithFrame:CGRectMake(0, 0, 320, 400)];
     [self.view addSubview:GridTV];
     
